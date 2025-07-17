@@ -8,16 +8,6 @@ let phoneCount = 0;
 let exportCount = 0;
 
 
-const MAX_FREE_PROCESS_COUNT = (function() {
-    const base = 3;
-    const multiplier = 1 << 1; 
-    const additionalOffset = 1;
-    return base * multiplier + additionalOffset;
-})();
-
-let leadGenCount = 0;
-
-
 // Track statistical data
 function updateStats() {
     document.getElementById('totalLeadsCount').textContent = allResults.length;
@@ -30,146 +20,6 @@ function updateStats() {
     document.getElementById('phoneCount').textContent = phoneCount;
 }
 
-// Add these functions at the beginning
-function showLicenseModal() {
-    const modal = document.getElementById('licenseModal');
-    modal.style.display = 'flex';
-}
-
-function hideLicenseModal() {
-    const modal = document.getElementById('licenseModal');
-    modal.style.display = 'none';
-}
-
-function showSuggestionModal() {
-    const modal = document.getElementById('suggestionModal');
-    modal.style.display = 'flex';
-}
-
-function hideSuggestionModal() {
-    const modal = document.getElementById('suggestionModal');
-    modal.style.display = 'none';
-}
-
-function updateProStatus(isActive) {
-    const proStatusBadge = document.getElementById('proStatus');
-    if (isActive) {
-        proStatusBadge.textContent = 'PRO';
-        proStatusBadge.style.backgroundColor = '#4CAF50';
-        // Enable pro features
-        document.getElementById('allWebsitesOption').classList.remove('disabled');
-        document.getElementById('proCountriesOption').classList.remove('disabled');
-        // Hide upgrade button
-        document.getElementById('upgradeBtn').style.display = 'none';
-    } else {
-        proStatusBadge.textContent = 'FREE';
-        // Disable pro features
-        document.getElementById('allWebsitesOption').classList.add('disabled');
-        document.getElementById('proCountriesOption').classList.add('disabled');
-        // Show upgrade button
-        document.getElementById('upgradeBtn').style.display = 'block';
-    }
-}
-
-// Add function to update lead gen counter display
-function updateLeadGenCounter() {
-    // Get current count from storage
-    chrome.storage.sync.get(['leadGenCount', 'licenseStatus'], (result) => {
-        leadGenCount = result.leadGenCount || 0;
-        const isProLicense = result.licenseStatus && result.licenseStatus.isValid;
-        
-        // Only show counter for free users
-        if (!isProLicense) {
-            const counterElement = document.getElementById('leadGenCounter');
-            if (counterElement) {
-                counterElement.textContent = `${leadGenCount}/${MAX_FREE_PROCESS_COUNT}`;
-                
-                // Change color when approaching limit
-                if (leadGenCount >= MAX_FREE_PROCESS_COUNT - 1) {
-                    counterElement.style.color = '#d32f2f';
-                } else {
-                    counterElement.style.color = '#333';
-                }
-            }
-        }
-    });
-}
-
-// Add show/hide content functions
-function showDashboardContent() {
-    document.getElementById('dashboardContent').style.display = 'block';
-    document.getElementById('licenseDetailsContent').style.display = 'none';
-    
-    // Update menu items
-    document.getElementById('dashboardMenuItem').classList.add('active');
-    document.getElementById('licenseManagementItem').classList.remove('active');
-}
-
-function showLicenseDetails() {
-    document.getElementById('dashboardContent').style.display = 'none';
-    document.getElementById('licenseDetailsContent').style.display = 'block';
-    
-    // Update menu items
-    document.getElementById('dashboardMenuItem').classList.remove('active');
-    document.getElementById('licenseManagementItem').classList.add('active');
-    
-    // Load license details
-    loadLicenseDetails();
-}
-
-function loadLicenseDetails() {
-    const licenseStatusElement = document.getElementById('mainLicenseStatus');
-    
-    // Show loading state
-    licenseStatusElement.innerHTML = `
-        <div class="license-placeholder">
-            <p>Loading license details...</p>
-        </div>
-    `;
-    
-    // Check license status
-    chrome.storage.sync.get(['licenseStatus'], function(result) {
-        if (result.licenseStatus && result.licenseStatus.isValid) {
-            // Show active license status
-            const purchase = result.licenseStatus.purchaseData;
-            const licenseKey = result.licenseStatus.licenseKey;
-            const lastVerified = result.licenseStatus.lastVerified || result.licenseStatus.verifiedAt;
-            
-            licenseStatusElement.innerHTML = `
-                <div class="license-status-active">
-                    <div class="license-status-badge">
-                        <i class="fas fa-check-circle"></i> PRO LICENSE ACTIVE
-                    </div>
-                    <p>Your PRO license is active and validated. Enjoy all premium features!</p>
-                    
-                    <div class="license-details-info">
-                        <p><strong>Email:</strong> <span>${purchase.email}</span></p>
-                        <p><strong>License Key:</strong> <span>${maskLicenseKey(licenseKey)}</span></p>
-                        <p><strong>Purchase Date:</strong> <span>${new Date(purchase.created_at).toLocaleDateString()}</span></p>
-                        <p><strong>Last Verified:</strong> <span>${new Date(lastVerified).toLocaleString()}</span></p>
-                    </div>
-                </div>
-            `;
-        } else {
-            // Show inactive license status
-            licenseStatusElement.innerHTML = `
-                <div class="license-inactive">
-                    <h3><i class="fas fa-exclamation-circle"></i> No Active License</h3>
-                    <p>You're currently using the free version of LeadSpry.</p>
-                    <p>Upgrade to PRO to unlock all features including unlimited lead generation runs.</p>
-                </div>
-            `;
-        }
-    });
-}
-
-// Helper function to mask license key for display
-function maskLicenseKey(key) {
-    if (!key) return 'N/A';
-    const firstPart = key.substring(0, 4);
-    const lastPart = key.substring(key.length - 4);
-    return `${firstPart}••••••••${lastPart}`;
-}
 
 document.addEventListener('DOMContentLoaded', function() {
     // Set up custom selects
@@ -222,120 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set up message listener
     chrome.runtime.onMessage.addListener(handleMessage);
 
-    // Update upgrade button click handler
-    document.getElementById('upgradeBtn').addEventListener('click', showLicenseModal);
-    
-    // Update unlock features link click handler
-    document.getElementById('unlockFeaturesLink').addEventListener('click', function(e) {
-        e.preventDefault();
-        showLicenseModal();
-    });
-
-    // Add close button handlers
-    document.getElementById('closeLicenseModal').addEventListener('click', hideLicenseModal);
-    document.getElementById('closeSuggestionModal').addEventListener('click', hideSuggestionModal);
-
-    // Update license verification handler
-    document.getElementById('verifyLicenseBtn').addEventListener('click', function() {
-        const licenseKey = document.getElementById('licenseKeyInput').value.trim();
-        const statusDiv = document.getElementById('licenseStatus');
-        const verifyBtn = document.getElementById('verifyLicenseBtn');
-        
-        if (!licenseKey) {
-            statusDiv.innerHTML = `
-                <div style="color: #d32f2f;">
-                    <strong>Please enter a license key</strong>
-                </div>
-            `;
-            return;
-        }
-
-        // Show loading state
-        verifyBtn.textContent = 'Verifying...';
-        verifyBtn.disabled = true;
-        statusDiv.innerHTML = `
-            <div style="color: #1976d2;">
-                <strong>Verifying license...</strong>
-            </div>
-        `;
-
-        chrome.runtime.sendMessage(
-            { action: "verifyLicense", licenseKey: licenseKey },
-            function(response) {
-                // Reset button state
-                verifyBtn.textContent = 'Verify License';
-                verifyBtn.disabled = false;
-
-                if (chrome.runtime.lastError) {
-                    statusDiv.innerHTML = `
-                        <div style="color: #d32f2f;">
-                            <strong>Verification Error</strong>
-                            <p style="font-size: 0.9em; margin-top: 5px;">
-                                ${chrome.runtime.lastError.message}
-                            </p>
-                        </div>
-                    `;
-                    return;
-                }
-
-                if (response && response.isValid) {
-                    const purchase = response.purchaseData;
-                    statusDiv.innerHTML = `
-                        <div style="color: green; margin-bottom: 10px;">
-                            <strong>✓ License Verified!</strong>
-                        </div>
-                        <div style="font-size: 0.9em; color: #666;">
-                            <p>Email: ${purchase.email}</p>
-                            <p>Purchase Date: ${new Date(purchase.created_at).toLocaleDateString()}</p>
-                        </div>
-                    `;
-                    updateProStatus(true);
-                    setTimeout(hideLicenseModal, 2000);
-                } else {
-                    statusDiv.innerHTML = `
-                        <div style="color: #d32f2f;">
-                            <strong>❌ Invalid License Key</strong>
-                            <p style="font-size: 0.9em; margin-top: 5px;">
-                                ${response?.error || 'Please check your license key and try again.'}
-                            </p>
-                        </div>
-                    `;
-                }
-            }
-        );
-    });
-
-    document.getElementById('getLicenseBtn').addEventListener('click', function() {
-        chrome.tabs.create({ url: 'https://hritikkumarkota.gumroad.com/l/leadspry' });
-    });
-
-    // Check license status on load
-    chrome.storage.sync.get(['licenseStatus'], function(result) {
-        if (result.licenseStatus && result.licenseStatus.isValid) {
-            updateProStatus(true);
-        } else {
-            updateProStatus(false);
-        }
-    });
-
-    // Sidebar menu item click handlers
-    const menuItems = document.querySelectorAll('.menu-item');
-    menuItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Remove active class from all items
-            menuItems.forEach(i => i.classList.remove('active'));
-            // Add active class to clicked item
-            this.classList.add('active');
-            
-            // Handle tab switching
-            if (this.id === 'licenseManagementItem') {
-                showLicenseDetails();
-            } else if (this.id === 'dashboardMenuItem') {
-                showDashboardContent();
-            }
-        });
-    });
-    
     // Star rating functionality
     const stars = document.querySelectorAll('.star');
     stars.forEach(star => {
@@ -373,263 +109,109 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Buy License button
-    document.getElementById('buyLicenseBtn').addEventListener('click', function() {
-        chrome.tabs.create({ url: 'https://hritikkumarkota.gumroad.com/l/leadspry' });
-    });
-    
     // Initialize stats
     updateStats();
-
-    // Add lead generation counter to the UI
-    const statsSection = document.querySelector('.stats-container');
-    if (statsSection) {
-        const leadGenCounterDiv = document.createElement('div');
-        leadGenCounterDiv.className = 'stat-item';
-        leadGenCounterDiv.innerHTML = `
-            <span class="stat-label">Lead Gen Runs:</span>
-            <span id="leadGenCounter" class="stat-value">0/${MAX_FREE_PROCESS_COUNT}</span>
-        `;
-        statsSection.appendChild(leadGenCounterDiv);
-    }
-    
-    // Update lead gen counter on load
-    updateLeadGenCounter();
-
-    // Add license verification handlers for the main license section
-    document.getElementById('mainVerifyLicenseBtn').addEventListener('click', function() {
-        const licenseKey = document.getElementById('mainLicenseKeyInput').value.trim();
-        if (!licenseKey) {
-            alert('Please enter a license key');
-            return;
-        }
-        
-        // Show loading state
-        const verifyBtn = document.getElementById('mainVerifyLicenseBtn');
-        verifyBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Verifying...';
-        verifyBtn.disabled = true;
-        
-        chrome.runtime.sendMessage(
-            { action: "verifyLicense", licenseKey: licenseKey },
-            function(response) {
-                // Reset button state
-                verifyBtn.innerHTML = '<i class="fas fa-check-circle"></i> Verify License';
-                verifyBtn.disabled = false;
-                
-                if (chrome.runtime.lastError) {
-                    alert('Verification Error: ' + chrome.runtime.lastError.message);
-                    return;
-                }
-                
-                if (response && response.isValid) {
-                    // Reload license details and update UI
-                    updateProStatus(true);
-                    loadLicenseDetails();
-                    document.getElementById('mainLicenseKeyInput').value = '';
-                } else {
-                    alert('Invalid License Key: ' + (response?.error || 'Please check your license key and try again.'));
-                }
-            }
-        );
-    });
-    
-    document.getElementById('mainGetLicenseBtn').addEventListener('click', function() {
-        chrome.tabs.create({ url: 'https://hritikkumarkota.gumroad.com/l/leadspry' });
-    });
 });
 
 function searchAndScrape() {
-    // First check if user has reached their free limit
-    chrome.storage.sync.get(['licenseStatus', 'leadGenCount'], (result) => {
-        const isProLicense = result.licenseStatus && 
-                            result.licenseStatus.isValid && 
-                            result.licenseStatus.isValid === true;
-        const leadGenCount = result.leadGenCount || 0;
-        
-        // Check if free user has exceeded process limit
-        if (!isProLicense && leadGenCount >= MAX_FREE_PROCESS_COUNT) {
-            // Show notification about exceeded limit without opening search tab
-            document.getElementById('status').textContent = 'Free version limit reached! Please upgrade to continue.';
-            
-            // Create limit notification if it doesn't already exist
-            if (!document.querySelector('.limit-notification')) {
-                const resultsDiv = document.getElementById('results');
-                const limitNotification = document.createElement('div');
-                limitNotification.className = 'limit-notification';
-                limitNotification.innerHTML = `
-                    <div class="limit-alert">
-                        <h3>🔒 Free Version Limit Reached</h3>
-                        <p>You've used all 5 lead generation runs available in the free version.</p>
-                        <p>Upgrade to LeadSpry Pro for unlimited lead generation runs!</p>
-                        <button id="upgradeProButton" class="upgrade-pro-btn">Upgrade to Pro</button>
-                    </div>
-                `;
-                
-                // Insert at the top of results
-                if (resultsDiv.firstChild) {
-                    resultsDiv.insertBefore(limitNotification, resultsDiv.firstChild);
-                } else {
-                    resultsDiv.appendChild(limitNotification);
-                }
-                
-                // Add CSS for the limit notification
-                const style = document.createElement('style');
-                style.id = 'limit-notification-styles';
-                style.textContent = `
-                    .limit-notification {
-                        margin-bottom: 20px;
-                        width: 100%;
-                    }
-                    .limit-alert {
-                        background-color: #ffe8e6;
-                        border: 1px solid #ffcdd2;
-                        border-radius: 8px;
-                        padding: 15px;
-                        margin-bottom: 20px;
-                        color: #c62828;
-                    }
-                    .limit-alert h3 {
-                        margin-top: 0;
-                        color: #c62828;
-                    }
-                    .upgrade-pro-btn {
-                        background-color: #4CAF50;
-                        color: white;
-                        border: none;
-                        border-radius: 5px;
-                        padding: 8px 16px;
-                        cursor: pointer;
-                        margin-top: 10px;
-                        font-weight: bold;
-                    }
-                    .upgrade-pro-btn:hover {
-                        background-color: #388E3C;
-                    }
-                `;
-                
-                // Only add the style if it doesn't already exist
-                if (!document.getElementById('limit-notification-styles')) {
-                    document.head.appendChild(style);
-                }
-                
-                // Add click handler for upgrade button
-                setTimeout(() => {
-                    document.getElementById('upgradeProButton').addEventListener('click', showLicenseModal);
-                    // Show license modal automatically
-                    showLicenseModal();
-                }, 100);
-            } else {
-                // Just show the license modal if notification already exists
-                showLicenseModal();
-            }
-            
-            // Update lead gen counter display
-            updateLeadGenCounter();
-            
-            // Exit function early - don't create search tab
-            return;
-        }
-        
-        // If we get here, user hasn't reached limit, continue with normal flow
-        allResults = []; // Reset results
-        currentPage = 0; // Reset page count
-        
-        // Update UI
-        document.getElementById('status').textContent = 'Searching and scraping in progress...';
-        document.getElementById('results').innerHTML = '';
-        document.getElementById('resultCount').textContent = '0';
-        document.getElementById('loadMore').style.display = 'none';
-        
-        // Get base keyword
-        const keyword = document.getElementById('keywordInput').value.trim();
-        
-        // Handle platform selection
-        const platformSelect = document.getElementById('platformSelect');
-        let platform = platformSelect.dataset.value;
-        if (platform === 'Other') {
-            platform = document.getElementById('otherPlatformInput').value;
-        }
-        
-        // Handle country selection
-        const countrySelect = document.getElementById('countrySelect');
-        let countryValue = countrySelect.dataset.value === 'Other' 
-            ? document.getElementById('otherCountryInput').value 
-            : countrySelect.dataset.value;
-        
-        const includeGmail = document.getElementById('gmailCheckbox').checked;
-        const includePhone = document.getElementById('phoneCheckbox').checked;
+    allResults = []; // Reset results
+    currentPage = 0; // Reset page count
 
-        let query = '';
+    // Update UI
+    document.getElementById('status').textContent = 'Searching and scraping in progress...';
+    document.getElementById('results').innerHTML = '';
+    document.getElementById('resultCount').textContent = '0';
+    document.getElementById('loadMore').style.display = 'none';
 
-        // Special handling for Websites platform or All Websites
-        if (platform && (platform.toLowerCase() === 'websites' || platform.toLowerCase() === 'website' || platform.toLowerCase() === 'all websites')) {
-            query = keyword;
-            // Add search modifiers for websites
-            query += ' (';
-            const websiteSearchTerms = [
-                'intext:"contact us"',
-                'intext:"email"',
-                'intext:"phone"',
-                '"contact page"',
-                'inurl:contact',
-                'site:org',
-                'site:com',
-                'site:net'
-            ];
-            query += websiteSearchTerms.join(' OR ');
-            query += ')';
-        } else if (platform) {
-            // For specific platforms (like LinkedIn, Twitter etc.)
-            query = keyword + ` site:${platform.toLowerCase()}.com`;
-        } else {
-            // Generic search if no platform selected
-            query = keyword;
-        }
+    // Get base keyword
+    const keyword = document.getElementById('keywordInput').value.trim();
 
-        // Add country filter
-        if (countryValue && countryValue !== 'All Countries') {
-            query += ` "${countryValue}"`;
-        }
+    // Handle platform selection
+    const platformSelect = document.getElementById('platformSelect');
+    let platform = platformSelect.dataset.value;
+    if (platform === 'Other') {
+        platform = document.getElementById('otherPlatformInput').value;
+    }
+    
+    // Handle country selection
+    const countrySelect = document.getElementById('countrySelect');
+    let countryValue = countrySelect.dataset.value === 'Other'
+        ? document.getElementById('otherCountryInput').value
+        : countrySelect.dataset.value;
+    
+    const includeGmail = document.getElementById('gmailCheckbox').checked;
+    const includePhone = document.getElementById('phoneCheckbox').checked;
 
-        // Add email and phone filters
-        if (includeGmail || includePhone) {
-            query += ' (';
-            let options = [];
-            if (includeGmail) {
-                options.push('"@gmail.com"');
-                options.push('"email:"');
-                options.push('"mailto:"');
-                options.push('intext:email');
-            }
-            if (includePhone) {
-                options.push('"phone number"');
-                options.push('"tel:"');
-                options.push('"contact number"');
-                options.push('intext:phone');
-            }
-            query += options.join(' OR ');
-            query += ')';
+    let query = '';
+
+    // Special handling for Websites platform or All Websites
+    if (platform && (platform.toLowerCase() === 'websites' || platform.toLowerCase() === 'website' || platform.toLowerCase() === 'all websites')) {
+        query = keyword;
+        // Add search modifiers for websites
+        query += ' (';
+        const websiteSearchTerms = [
+            'intext:"contact us"',
+            'intext:"email"',
+            'intext:"phone"',
+            '"contact page"',
+            'inurl:contact',
+            'site:org',
+            'site:com',
+            'site:net'
+        ];
+        query += websiteSearchTerms.join(' OR ');
+        query += ')';
+    } else if (platform) {
+        // For specific platforms (like LinkedIn, Twitter etc.)
+        query = keyword + ` site:${platform.toLowerCase()}.com`;
+    } else {
+        // Generic search if no platform selected
+        query = keyword;
+    }
+
+    // Add country filter
+    if (countryValue && countryValue !== 'All Countries') {
+        query += ` "${countryValue}"`;
+    }
+
+    // Add email and phone filters
+    if (includeGmail || includePhone) {
+        query += ' (';
+        let options = [];
+        if (includeGmail) {
+            options.push('"@gmail.com"');
+            options.push('"email:"');
+            options.push('"mailto:"');
+            options.push('intext:email');
         }
-        
-        console.log("Search query:", query); // For debugging
-        
-        // Store current tab ID to return focus later
-        let dashboardTabId;
-        chrome.tabs.getCurrent(function(tab) {
-            dashboardTabId = tab.id;
-            
-            // Create a new tab for search
-            chrome.tabs.create({
-                url: `https://www.google.com/search?q=${encodeURIComponent(query)}&num=100`,
-                active: false  // Don't switch to the new tab
-            }, function(newTab) {
-                // Send message to background script
-                chrome.runtime.sendMessage({
-                    action: "searchAndScrape",
-                    query: query,
-                    searchTabId: newTab.id,
-                    dashboardTabId: dashboardTabId
-                });
+        if (includePhone) {
+            options.push('"phone number"');
+            options.push('"tel:"');
+            options.push('"contact number"');
+            options.push('intext:phone');
+        }
+        query += options.join(' OR ');
+        query += ')';
+    }
+
+    console.log("Search query:", query); // For debugging
+
+    // Store current tab ID to return focus later
+    let dashboardTabId;
+    chrome.tabs.getCurrent(function(tab) {
+        dashboardTabId = tab.id;
+
+        // Create a new tab for search
+        chrome.tabs.create({
+            url: `https://www.google.com/search?q=${encodeURIComponent(query)}&num=100`,
+            active: false  // Don't switch to the new tab
+        }, function(newTab) {
+            // Send message to background script
+            chrome.runtime.sendMessage({
+                action: "searchAndScrape",
+                query: query,
+                searchTabId: newTab.id,
+                dashboardTabId: dashboardTabId
             });
         });
     });
@@ -637,9 +219,6 @@ function searchAndScrape() {
 
 function handleMessage(request, sender, sendResponse) {
     if (request.action === "displayResults") {
-        // Check license status from the message
-        const isProLicense = request.isProLicense;
-
         // Get checkbox states
         const includeGmail = document.getElementById('gmailCheckbox').checked;
         const includePhone = document.getElementById('phoneCheckbox').checked;
@@ -710,15 +289,12 @@ function handleMessage(request, sender, sendResponse) {
         updateStats();
         
         // Display all results (no more limit)
-        displayResults(allResults, isProLicense);
+        displayResults(allResults);
     } else if (request.action === "scrapingComplete") {
         document.getElementById('status').textContent = 'Scraping completed!';
         
         // Remove load more button
         document.getElementById('loadMore').style.display = 'none';
-        
-        // Update lead gen counter after completion
-        updateLeadGenCounter();
     } else if (request.action === "captchaFound") {
         // Update UI to show CAPTCHA detected
         document.getElementById('status').textContent = 'CAPTCHA detected! Attempting to solve automatically...';
@@ -895,108 +471,10 @@ function handleMessage(request, sender, sendResponse) {
                 resumeNotification.parentNode.removeChild(resumeNotification);
             }
         }, 5000);
-    } else if (request.action === "licenseExpired") {
-        const statusDiv = document.getElementById('licenseStatus');
-        if (statusDiv) {
-            statusDiv.innerHTML = `
-                <div style="color: #d32f2f;">
-                    <strong>License Expired</strong>
-                    <p style="font-size: 0.9em; margin-top: 5px;">
-                        ${request.message}
-                    </p>
-                </div>
-            `;
-        }
-        updateProStatus(false);
-    } else if (request.action === "licenseError") {
-        const statusDiv = document.getElementById('licenseStatus');
-        if (statusDiv) {
-            statusDiv.innerHTML = `
-                <div style="color: #f57c00;">
-                    <strong>License Verification Error</strong>
-                    <p style="font-size: 0.9em; margin-top: 5px;">
-                        ${request.message}
-                    </p>
-                </div>
-            `;
-        }
-    } else if (request.action === "processLimitExceeded") {
-        // Show notification that limit is exceeded and prompt to upgrade
-        document.getElementById('status').textContent = 'Free version limit reached! Please upgrade to continue.';
-        
-        // Create limit notification
-        const resultsDiv = document.getElementById('results');
-        const limitNotification = document.createElement('div');
-        limitNotification.className = 'limit-notification';
-        limitNotification.innerHTML = `
-            <div class="limit-alert">
-                <h3>🔒 Free Version Limit Reached</h3>
-                <p>You've used all 5 lead generation runs available in the free version.</p>
-                <p>Upgrade to LeadSpry Pro for unlimited lead generation runs!</p>
-                <button id="upgradeProButton" class="upgrade-pro-btn">Upgrade to Pro</button>
-            </div>
-        `;
-        
-        // Insert at the top of results
-        if (resultsDiv.firstChild) {
-            resultsDiv.insertBefore(limitNotification, resultsDiv.firstChild);
-        } else {
-            resultsDiv.appendChild(limitNotification);
-        }
-        
-        // Style for the limit notification
-        const style = document.createElement('style');
-        style.id = 'limit-notification-styles';
-        style.textContent = `
-            .limit-notification {
-                margin-bottom: 20px;
-                width: 100%;
-            }
-            .limit-alert {
-                background-color: #ffe8e6;
-                border: 1px solid #ffcdd2;
-                border-radius: 8px;
-                padding: 15px;
-                margin-bottom: 20px;
-                color: #c62828;
-            }
-            .limit-alert h3 {
-                margin-top: 0;
-                color: #c62828;
-            }
-            .upgrade-pro-btn {
-                background-color: #4CAF50;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                padding: 8px 16px;
-                cursor: pointer;
-                margin-top: 10px;
-                font-weight: bold;
-            }
-            .upgrade-pro-btn:hover {
-                background-color: #388E3C;
-            }
-        `;
-        
-        // Only add the style if it doesn't already exist
-        if (!document.getElementById('limit-notification-styles')) {
-            document.head.appendChild(style);
-        }
-        
-        // Show license modal on button click
-        setTimeout(() => {
-            document.getElementById('upgradeProButton').addEventListener('click', showLicenseModal);
-            // Show license modal automatically
-            showLicenseModal();
-        }, 100);
-        
-        // Update lead gen counter
-        updateLeadGenCounter();
     }
 }
 
-function displayResults(results, isProLicense = false) {
+function displayResults(results) {
     const resultsDiv = document.getElementById('results');
     const resultCountSpan = document.getElementById('resultCount');
     
@@ -1066,36 +544,30 @@ function downloadExcel() {
         return;
     }
 
-    // Get license status
-    chrome.storage.sync.get(['licenseStatus'], function(result) {
-        const isProLicense = result.licenseStatus && result.licenseStatus.isValid;
-        
-        // No more result limits - export all results
-        const resultsToExport = allResults;
-        
-        // Create CSV content
-        let csvContent = "data:text/csv;charset=utf-8,";
-        csvContent += "Name,Email,Phone,URL\n";
-        
-        resultsToExport.forEach(item => {
-            const row = [
-                item.name ? `"${item.name.replace(/"/g, '""')}"` : "",
-                item.email || "",
-                item.phone || "",
-                item.url || ""
-            ].join(",");
-            csvContent += row + "\n";
-        });
-        
-        // Create download link
-        const encodedUri = encodeURI(csvContent);
-        const link = document.createElement("a");
-        link.setAttribute("href", encodedUri);
-        link.setAttribute("download", "leadspry_results.csv");
-        document.body.appendChild(link);
-        
-        // Trigger download
-        link.click();
-        document.body.removeChild(link);
+    const resultsToExport = allResults;
+
+    // Create CSV content
+    let csvContent = "data:text/csv;charset=utf-8,";
+    csvContent += "Name,Email,Phone,URL\n";
+
+    resultsToExport.forEach(item => {
+        const row = [
+            item.name ? `"${item.name.replace(/"/g, '""')}"` : "",
+            item.email || "",
+            item.phone || "",
+            item.url || ""
+        ].join(",");
+        csvContent += row + "\n";
     });
-} 
+
+    // Create download link
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "leadspry_results.csv");
+    document.body.appendChild(link);
+
+    // Trigger download
+    link.click();
+    document.body.removeChild(link);
+}

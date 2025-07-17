@@ -771,11 +771,6 @@
                     <i class="fas fa-chart-line"></i>
                     <span>Dashboard</span>
                 </div>
-                <div class="menu-item" id="licenseManagementItem">
-                    <i class="fas fa-key"></i>
-                    <span>License Management</span>
-                </div>
-                
                 <div class="sidebar-divider"></div>
                 
                 <!-- Rating Box -->
@@ -791,14 +786,6 @@
                     </div>
                 </div>
                 
-                <!-- Buy License Button -->
-                <div class="buy-license-container">
-                    <button id="buyLicenseBtn" class="buy-license-btn">
-                        <i class="fas fa-crown"></i>
-                        Buy Pro License
-                    </button>
-                </div>
-
                 <!-- Language Selector -->
                 <div class="language-selector-container">
                     <div class="language-selector">
@@ -842,10 +829,6 @@
         <!-- Header -->
         <div class="header">
             <h2>LeadSpry Dashboard</h2>
-            <div class="user-profile">
-                <div id="proStatus" class="pro-badge">FREE</div>
-                <button id="upgradeBtn" class="upgrade-btn">⭐ Upgrade to PRO</button>
-            </div>
         </div>
         
         <!-- Main Content -->
@@ -890,7 +873,7 @@
                                     <div class="custom-select-option" data-value="Quora">Quora</div>
                                     <div class="custom-select-option" data-value="Reddit">Reddit</div>
                                     <div class="custom-select-option" data-value="Website">Website</div>
-                                    <div id="allWebsitesOption" class="custom-select-option" data-value="All Websites">All Websites <span class="pro-badge">PRO</span></div>
+                                    <div id="allWebsitesOption" class="custom-select-option" data-value="All Websites">All Websites</div>
                                     <div class="custom-select-option" data-value="Other">Other</div>
                                 </div>
                             </div>
@@ -949,7 +932,7 @@
                                     <div class="custom-select-option" data-value="United Arab Emirates">United Arab Emirates (+971)</div>
                                     <div class="custom-select-option" data-value="Vietnam">Vietnam (+84)</div>
                                     <div class="custom-select-option" data-value="Zimbabwe">Zimbabwe (+263)</div>
-                                    <div id="proCountriesOption" class="custom-select-option" data-value="All Countries">All Countries <span class="pro-badge">PRO</span></div>
+                                    <div id="proCountriesOption" class="custom-select-option" data-value="All Countries">All Countries</div>
                                     <div class="custom-select-option" data-value="Other">Other</div>
                                 </div>
                             </div>
@@ -977,97 +960,11 @@
                 <div class="results-container">
                     <div class="results-header">
                         <span class="results-count">Results: <span id="resultCount">0</span></span>
-                        <a id="unlockFeaturesLink" href="#" class="unlock-link">⭐ Unlock all features</a>
                     </div>
                     <div class="results-body" id="results"></div>
                     <button id="loadMore" class="load-more" style="display: none;">Load More</button>
                     <div id="status"></div>
                 </div>
-            </div>
-            
-            <!-- License Details Content -->
-            <div id="licenseDetailsContent" style="display: none;">
-                <div class="license-details-container">
-                    <h2><i class="fas fa-key"></i> License Details</h2>
-                    
-                    <div class="license-status-card">
-                        <div id="mainLicenseStatus">
-                            <!-- This will be filled dynamically -->
-                            <div class="license-placeholder">
-                                <p>Loading license details...</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="license-actions">
-                        <h3>License Management</h3>
-                        <div class="license-form">
-                            <div class="input-group">
-                                <label for="mainLicenseKeyInput">License Key</label>
-                                <input type="text" id="mainLicenseKeyInput" placeholder="Enter your license key">
-                            </div>
-                            <div class="button-group">
-                                <button id="mainVerifyLicenseBtn" class="primary-btn">
-                                    <i class="fas fa-check-circle"></i> Verify License
-                                </button>
-                                <button id="mainGetLicenseBtn" class="secondary-btn">
-                                    <i class="fas fa-shopping-cart"></i> Get a License
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="license-benefits">
-                        <h3>PRO Benefits</h3>
-                        <ul class="benefits-list">
-                            <li><i class="fas fa-check"></i> Unlimited lead generation runs</li>
-                            <li><i class="fas fa-check"></i> Access to all websites search</li>
-                            <li><i class="fas fa-check"></i> Global country search</li>
-                            <li><i class="fas fa-check"></i> Export unlimited results</li>
-                            <li><i class="fas fa-check"></i> Priority support</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- License Modal -->
-    <div id="licenseModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Activate PRO License</h2>
-                <button id="closeLicenseModal" class="close-btn">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p>Enter your license key to unlock all PRO features:</p>
-                <div class="input-group" style="margin-top: 15px;">
-                    <input type="text" id="licenseKeyInput" placeholder="Enter your license key">
-                </div>
-                <div class="button-group" style="margin-top: 20px;">
-                    <button id="verifyLicenseBtn" style="background-color: #4776E6; color: white;">Verify License</button>
-                    <button id="getLicenseBtn" style="background-color: #FFC107; color: black;">Get a License</button>
-                </div>
-                <div id="licenseStatus" style="margin-top: 15px;"></div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Suggestion Modal -->
-    <div id="suggestionModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>How to Use LeadSpy Pro</h2>
-                <button id="closeSuggestionModal" class="close-btn">&times;</button>
-            </div>
-            <div class="modal-body">
-                <h3>Pro Tips</h3>
-                <ul>
-                    <li>Use specific keywords for better results</li>
-                    <li>Combine platform and country filters</li>
-                    <li>To generate bulk results, select the Email checkbox. Avoid selecting the Phone checkbox simultaneously, as phone numbers are listed less frequently compared to email addresses, which may limit the results.</li>
-                    <li>For bulk leads data, prioritize selecting platforms like Facebook, Instagram, and Websites, as they provide extensive lead information.</li>
-                </ul>
             </div>
         </div>
     </div>

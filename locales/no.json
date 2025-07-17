@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "Kontrollpanel",
+        "searchAndScrape": "Søk og Ekstraher",
+        "downloadExcel": "Last Ned Excel",
+        "status": "Status",
+        "results": "Resultater",
+        "totalLeads": "Totalt Antall Leads",
+        "emails": "E-postadresser",
+        "phones": "Telefonnumre",
+        "exports": "Eksporter",
+        "leadGenRuns": "Lead-generering Kjører"
+    },
+    "license": {
+        "title": "Lisenshåndtering",
+        "proStatus": "Pro",
+        "freeStatus": "Gratis",
+        "verifyLicense": "Verifiser Lisens",
+        "buyLicense": "Kjøp Pro-lisens",
+        "licenseKey": "Lisensnøkkel",
+        "upgrade": "Oppgrader til Pro",
+        "unlockFeatures": "Lås Opp Alle Funksjoner",
+        "expired": "Lisens Utløpt",
+        "error": "Lisensverifisering Feilet"
+    },
+    "captcha": {
+        "detected": "CAPTCHA Oppdaget",
+        "solving": "Forsøker å løse CAPTCHA automatisk...",
+        "manualRequired": "Manuell CAPTCHA-løsning Kreves",
+        "solved": "CAPTCHA Løst",
+        "resumed": "Ekstrahering Gjenopptatt",
+        "focusButton": "Fokus på CAPTCHA-fanen"
+    },
+    "rating": {
+        "title": "Vurder Oss",
+        "subtitle": "Liker du LeadSpry? Vurder oss!",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "Nøkkelord",
+        "platform": "Plattform",
+        "country": "Land",
+        "other": "Annet",
+        "includeGmail": "Inkluder Gmail",
+        "includePhone": "Inkluder Telefon",
+        "searching": "Søker og ekstraherer...",
+        "completed": "Ekstrahering Fullført!",
+        "noResults": "Ingen resultater funnet."
+    },
+    "errors": {
+        "limitReached": "Du har nått grensen for den gratis versjonen! Oppgrader til Pro for å fortsette.",
+        "noResults": "Det er ingen resultater å eksportere!",
+        "verificationFailed": "Verifisering feilet"
+    },
+    "extension": {
+        "name": "LeadSpry - Leadgenereringsverktøy",
+        "description": "Kraftig leadgenereringsverktøy for å finne forretningskontakter på tvers av flere plattformer"
+    },
+    "language": {
+        "select": "Velg Språk",
+        "en": "Engelsk",
+        "es": "Spansk",
+        "fr": "Fransk",
+        "de": "Tysk",
+        "it": "Italiensk",
+        "pt": "Portugisisk",
+        "ru": "Russisk",
+        "zh": "Kinesisk",
+        "ja": "Japansk",
+        "ko": "Koreansk",
+        "ar": "Arabisk",
+        "hi": "Hindi",
+        "nl": "Nederlandsk",
+        "pl": "Polsk",
+        "tr": "Tyrkisk",
+        "vi": "Vietnamesisk",
+        "th": "Thai",
+        "id": "Indonesisk",
+        "ms": "Malaysisk",
+        "fa": "Persisk",
+        "he": "Hebraisk",
+        "el": "Gresk",
+        "ro": "Rumensk",
+        "hu": "Ungarsk",
+        "cs": "Tsjekkisk",
+        "sv": "Svensk",
+        "da": "Dansk",
+        "fi": "Finsk",
+        "no": "Norsk"
+    }
+} 

@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "Dasbor",
+        "searchAndScrape": "Cari & Ekstrak",
+        "downloadExcel": "Unduh Excel",
+        "status": "Status",
+        "results": "Hasil",
+        "totalLeads": "Total Lead",
+        "emails": "Email",
+        "phones": "Telepon",
+        "exports": "Ekspor",
+        "leadGenRuns": "Jalankan Generasi Lead"
+    },
+    "license": {
+        "title": "Manajemen Lisensi",
+        "proStatus": "PRO",
+        "freeStatus": "GRATIS",
+        "verifyLicense": "Verifikasi Lisensi",
+        "buyLicense": "Beli Lisensi Pro",
+        "licenseKey": "Kunci Lisensi",
+        "upgrade": "Tingkatkan ke Pro",
+        "unlockFeatures": "Buka Semua Fitur",
+        "expired": "Lisensi Kedaluwarsa",
+        "error": "Verifikasi Lisensi Gagal"
+    },
+    "captcha": {
+        "detected": "CAPTCHA Terdeteksi",
+        "solving": "Mencoba menyelesaikan CAPTCHA secara otomatis...",
+        "manualRequired": "Diperlukan Penyelesaian CAPTCHA Manual",
+        "solved": "CAPTCHA Terselesaikan",
+        "resumed": "Ekstraksi Dilanjutkan",
+        "focusButton": "Fokus ke Tab CAPTCHA"
+    },
+    "rating": {
+        "title": "Beri Nilai Kami",
+        "subtitle": "Apakah Anda menyukai LeadSpry? Beri nilai kami!",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "Kata Kunci",
+        "platform": "Platform",
+        "country": "Negara",
+        "other": "Lainnya",
+        "includeGmail": "Sertakan Gmail",
+        "includePhone": "Sertakan Telepon",
+        "searching": "Mencari dan mengekstrak...",
+        "completed": "Ekstraksi selesai!",
+        "noResults": "Tidak ada hasil ditemukan."
+    },
+    "errors": {
+        "limitReached": "Batas versi gratis tercapai! Tingkatkan untuk melanjutkan.",
+        "noResults": "Tidak ada hasil untuk diekspor!",
+        "verificationFailed": "Verifikasi gagal"
+    },
+    "language": {
+        "select": "Pilih Bahasa",
+        "en": "Bahasa Inggris",
+        "es": "Bahasa Spanyol",
+        "fr": "Bahasa Prancis",
+        "de": "Bahasa Jerman",
+        "it": "Bahasa Italia",
+        "pt": "Bahasa Portugis",
+        "ru": "Bahasa Rusia",
+        "zh": "Bahasa Mandarin",
+        "ja": "Bahasa Jepang",
+        "ko": "Bahasa Korea",
+        "ar": "Bahasa Arab",
+        "hi": "Bahasa Hindi",
+        "nl": "Bahasa Belanda",
+        "pl": "Bahasa Polandia",
+        "tr": "Bahasa Turki",
+        "vi": "Bahasa Vietnam",
+        "th": "Bahasa Thailand",
+        "id": "Bahasa Indonesia",
+        "ms": "Bahasa Melayu",
+        "fa": "Bahasa Persia",
+        "he": "Bahasa Ibrani",
+        "el": "Bahasa Yunani",
+        "ro": "Bahasa Rumania",
+        "hu": "Bahasa Hongaria",
+        "cs": "Bahasa Ceko",
+        "sv": "Bahasa Swedia",
+        "da": "Bahasa Denmark",
+        "fi": "Bahasa Finlandia",
+        "no": "Bahasa Norwegia"
+    },
+    "extension": {
+        "name": "LeadSpry - Alat Pembuatan Lead",
+        "description": "Alat pembuatan lead yang kuat untuk menemukan kontak bisnis di berbagai platform"
+    }
+} 

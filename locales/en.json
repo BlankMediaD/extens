@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "Dashboard",
+        "searchAndScrape": "Search & Scrape",
+        "downloadExcel": "Download Excel",
+        "status": "Status",
+        "results": "Results",
+        "totalLeads": "Total Leads",
+        "emails": "Emails",
+        "phones": "Phones",
+        "exports": "Exports",
+        "leadGenRuns": "Lead Gen Runs"
+    },
+    "license": {
+        "title": "License Management",
+        "proStatus": "PRO",
+        "freeStatus": "FREE",
+        "verifyLicense": "Verify License",
+        "buyLicense": "Buy Pro License",
+        "licenseKey": "License Key",
+        "upgrade": "Upgrade to Pro",
+        "unlockFeatures": "Unlock All Features",
+        "expired": "License Expired",
+        "error": "License Verification Error"
+    },
+    "captcha": {
+        "detected": "CAPTCHA Detected",
+        "solving": "Attempting to solve CAPTCHA automatically...",
+        "manualRequired": "Manual CAPTCHA Required",
+        "solved": "CAPTCHA Solved",
+        "resumed": "Scraping Resumed",
+        "focusButton": "Focus CAPTCHA Tab"
+    },
+    "rating": {
+        "title": "Rate Us",
+        "subtitle": "Love LeadSpry? Rate us!",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "Keyword",
+        "platform": "Platform",
+        "country": "Country",
+        "other": "Other",
+        "includeGmail": "Include Gmail",
+        "includePhone": "Include Phone",
+        "searching": "Searching and scraping in progress...",
+        "completed": "Scraping completed!",
+        "noResults": "No results found."
+    },
+    "errors": {
+        "limitReached": "Free version limit reached! Please upgrade to continue.",
+        "noResults": "No results to export!",
+        "verificationFailed": "Verification failed"
+    },
+    "language": {
+        "select": "Select Language",
+        "en": "English",
+        "es": "Spanish",
+        "fr": "French",
+        "de": "German",
+        "it": "Italian",
+        "pt": "Portuguese",
+        "ru": "Russian",
+        "zh": "Chinese",
+        "ja": "Japanese",
+        "ko": "Korean",
+        "ar": "Arabic",
+        "hi": "Hindi",
+        "nl": "Dutch",
+        "pl": "Polish",
+        "tr": "Turkish",
+        "vi": "Vietnamese",
+        "th": "Thai",
+        "id": "Indonesian",
+        "ms": "Malay",
+        "fa": "Persian",
+        "he": "Hebrew",
+        "el": "Greek",
+        "ro": "Romanian",
+        "hu": "Hungarian",
+        "cs": "Czech",
+        "sv": "Swedish",
+        "da": "Danish",
+        "fi": "Finnish",
+        "no": "Norwegian"
+    },
+    "extension": {
+        "name": "LeadSpry - b2b Lead Generation Tool",
+        "description": "Powerful business to business lead generation tool for finding business contacts across multiple platforms"
+    }
+} 

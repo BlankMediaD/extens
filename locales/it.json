@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "Cruscotto",
+        "searchAndScrape": "Cerca & Estrai",
+        "downloadExcel": "Scarica Excel",
+        "status": "Stato",
+        "results": "Risultati",
+        "totalLeads": "Lead Totali",
+        "emails": "Email",
+        "phones": "Telefoni",
+        "exports": "Esportazioni",
+        "leadGenRuns": "Esecuzioni Generazione"
+    },
+    "license": {
+        "title": "Gestione Licenza",
+        "proStatus": "PRO",
+        "freeStatus": "GRATUITO",
+        "verifyLicense": "Verifica Licenza",
+        "buyLicense": "Acquista Licenza Pro",
+        "licenseKey": "Chiave Licenza",
+        "upgrade": "Passa a Pro",
+        "unlockFeatures": "Sblocca Tutte le Funzionalità",
+        "expired": "Licenza Scaduta",
+        "error": "Errore Verifica Licenza"
+    },
+    "captcha": {
+        "detected": "CAPTCHA Rilevato",
+        "solving": "Tentativo di risoluzione automatica del CAPTCHA...",
+        "manualRequired": "CAPTCHA Manuale Richiesto",
+        "solved": "CAPTCHA Risolto",
+        "resumed": "Estrazione Ripresa",
+        "focusButton": "Focus Tab CAPTCHA"
+    },
+    "rating": {
+        "title": "Valutaci",
+        "subtitle": "Ti piace LeadSpry? Valutaci!",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "Parole Chiave",
+        "platform": "Piattaforma",
+        "country": "Paese",
+        "other": "Altro",
+        "includeGmail": "Includi Gmail",
+        "includePhone": "Includi Telefono",
+        "searching": "Ricerca ed estrazione in corso...",
+        "completed": "Estrazione completata!",
+        "noResults": "Nessun risultato trovato."
+    },
+    "errors": {
+        "limitReached": "Limite versione gratuita raggiunto! Aggiorna per continuare.",
+        "noResults": "Nessun risultato da esportare!",
+        "verificationFailed": "Verifica fallita"
+    },
+    "extension": {
+        "name": "LeadSpry - Strumento di Generazione Lead",
+        "description": "Potente strumento di generazione lead per trovare contatti commerciali su più piattaforme"
+    },
+    "language": {
+        "select": "Seleziona Lingua",
+        "en": "Inglese",
+        "es": "Spagnolo",
+        "fr": "Francese",
+        "de": "Tedesco",
+        "it": "Italiano",
+        "pt": "Portoghese",
+        "ru": "Russo",
+        "zh": "Cinese",
+        "ja": "Giapponese",
+        "ko": "Coreano",
+        "ar": "Arabo",
+        "hi": "Hindi",
+        "nl": "Olandese",
+        "pl": "Polacco",
+        "tr": "Turco",
+        "vi": "Vietnamita",
+        "th": "Tailandese",
+        "id": "Indonesiano",
+        "ms": "Malese",
+        "fa": "Persiano",
+        "he": "Ebraico",
+        "el": "Greco",
+        "ro": "Rumeno",
+        "hu": "Ungherese",
+        "cs": "Ceco",
+        "sv": "Svedese",
+        "da": "Danese",
+        "fi": "Finlandese",
+        "no": "Norvegese"
+    }
+} 

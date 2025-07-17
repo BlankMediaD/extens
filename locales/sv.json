@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "Kontrollpanel",
+        "searchAndScrape": "Sök och Extrahera",
+        "downloadExcel": "Ladda Ner Excel",
+        "status": "Status",
+        "results": "Resultat",
+        "totalLeads": "Totalt Antal Leads",
+        "emails": "E-postadresser",
+        "phones": "Telefonnummer",
+        "exports": "Exporter",
+        "leadGenRuns": "Lead-generering Körningar"
+    },
+    "license": {
+        "title": "Licenshantering",
+        "proStatus": "Pro",
+        "freeStatus": "Gratis",
+        "verifyLicense": "Verifiera Licens",
+        "buyLicense": "Köp Pro-licens",
+        "licenseKey": "Licensnyckel",
+        "upgrade": "Uppgradera till Pro",
+        "unlockFeatures": "Lås Upp Alla Funktioner",
+        "expired": "Licensen Har Utgångit",
+        "error": "Licensverifiering Misslyckades"
+    },
+    "captcha": {
+        "detected": "CAPTCHA Upptäckt",
+        "solving": "Försöker lösa CAPTCHA automatiskt...",
+        "manualRequired": "Manuell CAPTCHA-lösning Krävs",
+        "solved": "CAPTCHA Lösning",
+        "resumed": "Extrahering Återupptagen",
+        "focusButton": "Fokusera på CAPTCHA-fliken"
+    },
+    "rating": {
+        "title": "Betygsätt Oss",
+        "subtitle": "Gillar du LeadSpry? Betygsätt oss!",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "Nyckelord",
+        "platform": "Plattform",
+        "country": "Land",
+        "other": "Övrigt",
+        "includeGmail": "Inkludera Gmail",
+        "includePhone": "Inkludera Telefon",
+        "searching": "Söker och extraherar...",
+        "completed": "Extrahering Slutförd!",
+        "noResults": "Inga resultat hittades."
+    },
+    "errors": {
+        "limitReached": "Du har nått gränsen för den kostnadsfria versionen! Uppgradera till Pro för att fortsätta.",
+        "noResults": "Det finns inga resultat att exportera!",
+        "verificationFailed": "Verifiering misslyckades"
+    },
+    "extension": {
+        "name": "LeadSpry - Leadgenereringsverktyg",
+        "description": "Kraftfullt leadgenereringsverktyg för att hitta affärskontakter på flera plattformar"
+    },
+    "language": {
+        "select": "Välj Språk",
+        "en": "Engelska",
+        "es": "Spanska",
+        "fr": "Franska",
+        "de": "Tyska",
+        "it": "Italienska",
+        "pt": "Portugisiska",
+        "ru": "Ryska",
+        "zh": "Kinesiska",
+        "ja": "Japanska",
+        "ko": "Koreanska",
+        "ar": "Arabiska",
+        "hi": "Hindi",
+        "nl": "Nederländska",
+        "pl": "Polska",
+        "tr": "Turkiska",
+        "vi": "Vietnamesiska",
+        "th": "Thailändska",
+        "id": "Indonesiska",
+        "ms": "Malaysiska",
+        "fa": "Persiska",
+        "he": "Hebreiska",
+        "el": "Grekiska",
+        "ro": "Rumänska",
+        "hu": "Ungerska",
+        "cs": "Tjeckiska",
+        "sv": "Svenska",
+        "da": "Danska",
+        "fi": "Finska",
+        "no": "Norska"
+    }
+} 

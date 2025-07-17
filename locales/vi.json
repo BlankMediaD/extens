@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "Bảng Điều Khiển",
+        "searchAndScrape": "Tìm Kiếm & Trích Xuất",
+        "downloadExcel": "Tải Excel",
+        "status": "Trạng Thái",
+        "results": "Kết Quả",
+        "totalLeads": "Tổng Số Lead",
+        "emails": "Email",
+        "phones": "Điện Thoại",
+        "exports": "Xuất",
+        "leadGenRuns": "Lần Chạy Tạo Lead"
+    },
+    "license": {
+        "title": "Quản Lý Giấy Phép",
+        "proStatus": "PRO",
+        "freeStatus": "MIỄN PHÍ",
+        "verifyLicense": "Xác Minh Giấy Phép",
+        "buyLicense": "Mua Giấy Phép Pro",
+        "licenseKey": "Khóa Giấy Phép",
+        "upgrade": "Nâng Cấp Lên Pro",
+        "unlockFeatures": "Mở Khóa Tất Cả Tính Năng",
+        "expired": "Giấy Phép Đã Hết Hạn",
+        "error": "Xác Minh Giấy Phép Thất Bại"
+    },
+    "captcha": {
+        "detected": "Đã Phát Hiện CAPTCHA",
+        "solving": "Đang thử giải CAPTCHA tự động...",
+        "manualRequired": "Yêu Cầu Giải CAPTCHA Thủ Công",
+        "solved": "Đã Giải CAPTCHA",
+        "resumed": "Đã Tiếp Tục Trích Xuất",
+        "focusButton": "Tập Trung Vào Tab CAPTCHA"
+    },
+    "rating": {
+        "title": "Đánh Giá Chúng Tôi",
+        "subtitle": "Bạn có thích LeadSpry không? Đánh giá chúng tôi!",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "Từ Khóa",
+        "platform": "Nền Tảng",
+        "country": "Quốc Gia",
+        "other": "Khác",
+        "includeGmail": "Bao Gồm Gmail",
+        "includePhone": "Bao Gồm Điện Thoại",
+        "searching": "Đang tìm kiếm và trích xuất...",
+        "completed": "Trích xuất hoàn tất!",
+        "noResults": "Không tìm thấy kết quả."
+    },
+    "errors": {
+        "limitReached": "Đã đạt giới hạn phiên bản miễn phí! Nâng cấp để tiếp tục.",
+        "noResults": "Không có kết quả để xuất!",
+        "verificationFailed": "Xác minh thất bại"
+    },
+    "language": {
+        "select": "Chọn Ngôn Ngữ",
+        "en": "Tiếng Anh",
+        "es": "Tiếng Tây Ban Nha",
+        "fr": "Tiếng Pháp",
+        "de": "Tiếng Đức",
+        "it": "Tiếng Ý",
+        "pt": "Tiếng Bồ Đào Nha",
+        "ru": "Tiếng Nga",
+        "zh": "Tiếng Trung",
+        "ja": "Tiếng Nhật",
+        "ko": "Tiếng Hàn",
+        "ar": "Tiếng Ả Rập",
+        "hi": "Tiếng Hindi",
+        "nl": "Tiếng Hà Lan",
+        "pl": "Tiếng Ba Lan",
+        "tr": "Tiếng Thổ Nhĩ Kỳ",
+        "vi": "Tiếng Việt",
+        "th": "Tiếng Thái",
+        "id": "Tiếng Indonesia",
+        "ms": "Tiếng Mã Lai",
+        "fa": "Tiếng Ba Tư",
+        "he": "Tiếng Do Thái",
+        "el": "Tiếng Hy Lạp",
+        "ro": "Tiếng Romania",
+        "hu": "Tiếng Hungary",
+        "cs": "Tiếng Séc",
+        "sv": "Tiếng Thụy Điển",
+        "da": "Tiếng Đan Mạch",
+        "fi": "Tiếng Phần Lan",
+        "no": "Tiếng Na Uy"
+    },
+    "extension": {
+        "name": "LeadSpry - Công Cụ Tạo Khách Hàng Tiềm Năng",
+        "description": "Công cụ tạo khách hàng tiềm năng mạnh mẽ để tìm kiếm liên hệ doanh nghiệp trên nhiều nền tảng"
+    }
+} 

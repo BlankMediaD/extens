@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "Vezérlőpult",
+        "searchAndScrape": "Keresés és Kinyerés",
+        "downloadExcel": "Excel Letöltése",
+        "status": "Állapot",
+        "results": "Eredmények",
+        "totalLeads": "Összes Lead",
+        "emails": "Email Címek",
+        "phones": "Telefonszámok",
+        "exports": "Exportok",
+        "leadGenRuns": "Lead Generálás Futtatások"
+    },
+    "license": {
+        "title": "Licenc Kezelése",
+        "proStatus": "Pro",
+        "freeStatus": "Ingyenes",
+        "verifyLicense": "Licenc Ellenőrzése",
+        "buyLicense": "Pro Licenc Vásárlása",
+        "licenseKey": "Licenc Kulcs",
+        "upgrade": "Frissítés Pro-ra",
+        "unlockFeatures": "Minden Funkció Feloldása",
+        "expired": "Licenc Lejárt",
+        "error": "Licenc Ellenőrzés Sikertelen"
+    },
+    "captcha": {
+        "detected": "CAPTCHA Észlelve",
+        "solving": "Automatikus CAPTCHA megoldás kísérlete...",
+        "manualRequired": "Kézi CAPTCHA megoldás szükséges",
+        "solved": "CAPTCHA Megoldva",
+        "resumed": "Kinyerés Folytatva",
+        "focusButton": "Fókusz a CAPTCHA fülön"
+    },
+    "rating": {
+        "title": "Értékelj Minket",
+        "subtitle": "Tetszik a LeadSpry? Értékelj minket!",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "Kulcsszavak",
+        "platform": "Platform",
+        "country": "Ország",
+        "other": "Egyéb",
+        "includeGmail": "Gmail Belefoglalása",
+        "includePhone": "Telefon Belefoglalása",
+        "searching": "Keresés és kinyerés...",
+        "completed": "A Kinyerés Befejezve!",
+        "noResults": "Nincsenek találatok."
+    },
+    "errors": {
+        "limitReached": "Elérted az ingyenes verzió korlátozását! Frissítsd a Pro verzióra a folytatáshoz.",
+        "noResults": "Nincsenek eredmények az exportáláshoz!",
+        "verificationFailed": "Ellenőrzés sikertelen"
+    },
+    "language": {
+        "select": "Nyelv Kiválasztása",
+        "en": "Angol",
+        "es": "Spanyol",
+        "fr": "Francia",
+        "de": "Német",
+        "it": "Olasz",
+        "pt": "Portugál",
+        "ru": "Orosz",
+        "zh": "Kínai",
+        "ja": "Japán",
+        "ko": "Koreai",
+        "ar": "Arab",
+        "hi": "Hindi",
+        "nl": "Holland",
+        "pl": "Lengyel",
+        "tr": "Török",
+        "vi": "Vietnámi",
+        "th": "Thai",
+        "id": "Indonéz",
+        "ms": "Maláj",
+        "fa": "Perzsa",
+        "he": "Héber",
+        "el": "Görög",
+        "ro": "Román",
+        "hu": "Magyar",
+        "cs": "Cseh",
+        "sv": "Svéd",
+        "da": "Dán",
+        "fi": "Finn",
+        "no": "Norvég"
+    },
+    "extension": {
+        "name": "LeadSpry - Érdeklődő Generáló Eszköz",
+        "description": "Hatékony érdeklődő generáló eszköz üzleti kapcsolatok kereséséhez több platformon"
+    }
+} 

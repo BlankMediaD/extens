@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "Kontrolpanel",
+        "searchAndScrape": "Søg og Udtræk",
+        "downloadExcel": "Download Excel",
+        "status": "Status",
+        "results": "Resultater",
+        "totalLeads": "Samlede Leads",
+        "emails": "E-mailadresser",
+        "phones": "Telefonnumre",
+        "exports": "Eksporter",
+        "leadGenRuns": "Lead-generering Kør"
+    },
+    "license": {
+        "title": "Licenshåndtering",
+        "proStatus": "Pro",
+        "freeStatus": "Gratis",
+        "verifyLicense": "Verificer Licens",
+        "buyLicense": "Køb Pro-licens",
+        "licenseKey": "Licensnøgle",
+        "upgrade": "Opgrader til Pro",
+        "unlockFeatures": "Lås Op for Alle Funktioner",
+        "expired": "Licens Udløbet",
+        "error": "Licensverificering Fejlede"
+    },
+    "captcha": {
+        "detected": "CAPTCHA Detekteret",
+        "solving": "Forsøger at løse CAPTCHA automatisk...",
+        "manualRequired": "Manuel CAPTCHA-løsning Påkrævet",
+        "solved": "CAPTCHA Løst",
+        "resumed": "Udtrækning Genoptaget",
+        "focusButton": "Fokus på CAPTCHA-faneblad"
+    },
+    "rating": {
+        "title": "Bedøm Os",
+        "subtitle": "Kan du lide LeadSpry? Bedøm os!",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "Nøgleord",
+        "platform": "Platform",
+        "country": "Land",
+        "other": "Andet",
+        "includeGmail": "Inkluder Gmail",
+        "includePhone": "Inkluder Telefon",
+        "searching": "Søger og udtrækker...",
+        "completed": "Udtrækning Fuldført!",
+        "noResults": "Ingen resultater fundet."
+    },
+    "errors": {
+        "limitReached": "Du har nået grænsen for den gratis version! Opgrader til Pro for at fortsætte.",
+        "noResults": "Der er ingen resultater at eksportere!",
+        "verificationFailed": "Verificering fejlede"
+    },
+    "extension": {
+        "name": "LeadSpry - Lead Genererings Værktøj",
+        "description": "Kraftfuldt lead genererings værktøj til at finde forretningskontakter på tværs af flere platforme"
+    },
+    "language": {
+        "select": "Vælg Sprog",
+        "en": "Engelsk",
+        "es": "Spansk",
+        "fr": "Fransk",
+        "de": "Tysk",
+        "it": "Italiensk",
+        "pt": "Portugisisk",
+        "ru": "Russisk",
+        "zh": "Kinesisk",
+        "ja": "Japansk",
+        "ko": "Koreansk",
+        "ar": "Arabisk",
+        "hi": "Hindi",
+        "nl": "Hollandsk",
+        "pl": "Polsk",
+        "tr": "Tyrkisk",
+        "vi": "Vietnamesisk",
+        "th": "Thai",
+        "id": "Indonesisk",
+        "ms": "Malaysisk",
+        "fa": "Persisk",
+        "he": "Hebraisk",
+        "el": "Græsk",
+        "ro": "Rumænsk",
+        "hu": "Ungarsk",
+        "cs": "Tjekkisk",
+        "sv": "Svensk",
+        "da": "Dansk",
+        "fi": "Finsk",
+        "no": "Norsk"
+    }
+} 

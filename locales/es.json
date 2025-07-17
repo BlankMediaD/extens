@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "Panel de Control",
+        "searchAndScrape": "Buscar y Extraer",
+        "downloadExcel": "Descargar Excel",
+        "status": "Estado",
+        "results": "Resultados",
+        "totalLeads": "Total de Leads",
+        "emails": "Correos",
+        "phones": "Teléfonos",
+        "exports": "Exportaciones",
+        "leadGenRuns": "Ejecuciones de Generación"
+    },
+    "license": {
+        "title": "Gestión de Licencia",
+        "proStatus": "PRO",
+        "freeStatus": "GRATIS",
+        "verifyLicense": "Verificar Licencia",
+        "buyLicense": "Comprar Licencia Pro",
+        "licenseKey": "Clave de Licencia",
+        "upgrade": "Actualizar a Pro",
+        "unlockFeatures": "Desbloquear Todas las Características",
+        "expired": "Licencia Expirada",
+        "error": "Error de Verificación de Licencia"
+    },
+    "captcha": {
+        "detected": "CAPTCHA Detectado",
+        "solving": "Intentando resolver CAPTCHA automáticamente...",
+        "manualRequired": "CAPTCHA Manual Requerido",
+        "solved": "CAPTCHA Resuelto",
+        "resumed": "Extracción Reanudada",
+        "focusButton": "Enfocar Pestaña CAPTCHA"
+    },
+    "rating": {
+        "title": "Califícanos",
+        "subtitle": "¿Te gusta LeadSpry? ¡Califícanos!",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "Palabra Clave",
+        "platform": "Plataforma",
+        "country": "País",
+        "other": "Otro",
+        "includeGmail": "Incluir Gmail",
+        "includePhone": "Incluir Teléfono",
+        "searching": "Buscando y extrayendo en progreso...",
+        "completed": "¡Extracción completada!",
+        "noResults": "No se encontraron resultados."
+    },
+    "errors": {
+        "limitReached": "¡Límite de versión gratuita alcanzado! Por favor, actualiza para continuar.",
+        "noResults": "¡No hay resultados para exportar!",
+        "verificationFailed": "Verificación fallida"
+    },
+    "language": {
+        "select": "Seleccionar Idioma",
+        "en": "Inglés",
+        "es": "Español",
+        "fr": "Francés",
+        "de": "Alemán",
+        "it": "Italiano",
+        "pt": "Portugués",
+        "ru": "Ruso",
+        "zh": "Chino",
+        "ja": "Japonés",
+        "ko": "Coreano",
+        "ar": "Árabe",
+        "hi": "Hindi",
+        "nl": "Holandés",
+        "pl": "Polaco",
+        "tr": "Turco",
+        "vi": "Vietnamita",
+        "th": "Tailandés",
+        "id": "Indonesio",
+        "ms": "Malayo",
+        "fa": "Persa",
+        "he": "Hebreo",
+        "el": "Griego",
+        "ro": "Rumano",
+        "hu": "Húngaro",
+        "cs": "Checo",
+        "sv": "Sueco",
+        "da": "Danés",
+        "fi": "Finlandés",
+        "no": "Noruego"
+    },
+    "extension": {
+        "name": "LeadSpry - Herramienta de Generación de Leads",
+        "description": "Potente herramienta de generación de leads para encontrar contactos comerciales en múltiples plataformas"
+    }
+} 

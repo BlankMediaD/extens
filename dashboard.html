@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadSpry Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4776E6;
+            --secondary-color: #8E54E9;
+            --accent-color: #FFC107;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            min-height: 100vh;
+        }
+        
+        /* Dashboard Layout */
+        .dashboard {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            grid-template-rows: 70px 1fr;
+            grid-template-areas: 
+                "sidebar header"
+                "sidebar main";
+            height: 100vh;
+        }
+     
+
+
+        /* Sidebar */
+        .sidebar {
+            grid-area: sidebar;
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: var(--spacing-lg) 0;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .sidebar-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+            padding: 0 var(--spacing-lg) var(--spacing-lg);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .sidebar-logo img {
+            width: 40px;
+            margin-right: var(--spacing-md);
+        }
+        
+        .sidebar-logo h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .sidebar-menu {
+            flex: 1;
+            margin-top: var(--spacing-md);
+        }
+        
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: var(--spacing-md) var(--spacing-lg);
+            margin-bottom: var(--spacing-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+        }
+        
+        .menu-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .menu-item.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .menu-item.active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background-color: var(--accent-color);
+        }
+        
+        .menu-item i {
+            margin-right: var(--spacing-md);
+            font-size: 1.2rem;
+            width: 24px;
+            text-align: center;
+        }
+        
+        .menu-item span {
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+        
+        .sidebar-divider {
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: 20px var(--spacing-lg);
+        }
+        
+        /* Rating Box */
+        .rating-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+            margin: 30px var(--spacing-lg) 20px;
+        }
+        
+        .rating-box h3 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            opacity: 1;
+        }
+        
+        .rating-box p {
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+        
+        .stars {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .star {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.2s;
+            padding: 0 3px;
+        }
+        
+        .star:hover, .star.active, .star.hover {
+            color: #FFC107;
+        }
+        
+        /* Buy License Button */
+        .buy-license-container {
+            padding: 0 var(--spacing-lg);
+            margin-top: 15px;
+        }
+        
+        .buy-license-btn {
+            width: 100%;
+            background-color: var(--accent-color);
+            color: #000;
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .buy-license-btn i {
+            margin-right: 8px;
+        }
+        
+        .buy-license-btn:hover {
+            background-color: #e6ae06;
+        }
+        
+        /* Header */
+        .header {
+            grid-area: header;
+            background-color: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 var(--spacing-lg);
+            border-bottom: 1px solid #eee;
+        }
+        
+        .user-profile {
+            display: flex;
+            align-items: center;
+        }
+        
+        .user-profile .pro-badge {
+            background-color: var(--accent-color);
+            color: #000;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: var(--spacing-md);
+            cursor: pointer;
+        }
+        
+        .upgrade-btn {
+            background-color: var(--accent-color);
+            color: #000;
+            border: none;
+            padding: 8px 16px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        /* Main Content */
+        .main-content {
+            grid-area: main;
+            padding: var(--spacing-lg);
+            overflow-y: auto;
+        }
+        
+        .dashboard-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .stat-card {
+            background-color: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .stat-card h3 {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .stat-card .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .search-container {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .search-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--spacing-md);
+        }
+        
+        .input-group {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 500;
+        }
+        
+        input[type="text"], .custom-select-selected {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 14px;
+        }
+        
+        .custom-select {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .custom-select-options {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            width: 100%;
+            max-height: 200px;
+            overflow-y: auto;
+            border-radius: var(--border-radius);
+        }
+        
+        .custom-select-option {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .custom-select-option:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+        
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+        
+        .button-group button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: var(--border-radius);
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #searchAndScrape {
+            background-color: var(--primary-color);
+            flex: 1;
+        }
+        
+        #downloadExcel {
+            background-color: #4CAF50;
+            flex: 1;
+        }
+        
+        .results-container {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-md) var(--spacing-lg);
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .results-count {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .results-body {
+            padding: var(--spacing-lg);
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        
+        .result-item {
+            background-color: #f9f9f9;
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .result-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .result-item h3 {
+            margin-bottom: var(--spacing-sm);
+            font-size: 16px;
+            color: var(--primary-color);
+        }
+        
+        .result-item p {
+            margin: 4px 0;
+            font-size: 14px;
+        }
+        
+        .result-item strong {
+            color: #555;
+        }
+        
+        .result-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .result-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .load-more {
+            display: block;
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: var(--spacing-md);
+            border-radius: 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        .load-more:hover {
+            background-color: #3a67d8;
+        }
+        
+        .unlock-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        #otherCountryInput {
+            display: none;
+        }
+        
+        #status {
+            margin-top: var(--spacing-md);
+            font-size: 14px;
+            text-align: center;
+            padding: var(--spacing-md);
+        }
+        
+        .pro-badge {
+            background-color: var(--accent-color);
+            color: #000;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+        
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 1px solid #eee;
+        }
+        
+        .modal-header h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+        
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .upgrade-message {
+            background-color: #FFF3CD;
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+            margin-top: var(--spacing-md);
+            text-align: center;
+        }
+        
+        .disabled {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        
+        /* License Details Styles */
+        .license-details-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .license-details-container h2 {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+            color: var(--primary-color);
+        }
+        
+        .license-details-container h2 i {
+            margin-right: 10px;
+        }
+        
+        .license-status-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .license-status-active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .license-status-badge {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .license-status-badge i {
+            margin-right: 8px;
+        }
+        
+        .license-details-info {
+            background-color: #f5f5f5;
+            border-radius: var(--border-radius);
+            padding: 15px;
+            margin-top: 20px;
+            width: 100%;
+            text-align: left;
+        }
+        
+        .license-details-info p {
+            margin: 8px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .license-details-info strong {
+            font-weight: 600;
+            color: #555;
+        }
+        
+        .license-inactive {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .license-inactive h3 {
+            color: #d32f2f;
+            margin-bottom: 15px;
+        }
+        
+        .license-actions {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .license-actions h3 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 1.1rem;
+        }
+        
+        .license-form {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 15px;
+        }
+        
+        .primary-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .primary-btn i {
+            margin-right: 8px;
+        }
+        
+        .secondary-btn {
+            background-color: var(--accent-color);
+            color: black;
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .secondary-btn i {
+            margin-right: 8px;
+        }
+        
+        .license-benefits {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow);
+        }
+        
+        .license-benefits h3 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 1.1rem;
+        }
+        
+        .benefits-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .benefits-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .benefits-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .benefits-list li i {
+            color: #4CAF50;
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+        
+        /* Language Selector Styles */
+        .language-selector-container {
+            margin-top: auto;
+            padding: var(--spacing-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+        }
+        
+        .language-selector {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            padding: 10px;
+        }
+        
+        .language-selector i {
+            color: var(--white);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .language-select {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: var(--white);
+            font-size: 14px;
+            padding: 5px;
+            cursor: pointer;
+            outline: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        
+        .language-select option {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 10px;
+        }
+    </style>
+    <!-- Add FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-logo">
+                <img src="icon48.png" alt="LeadSpry Logo">
+                <h2>LeadSpry</h2>
+            </div>
+            <div class="sidebar-menu">
+                <div class="menu-item active" id="dashboardMenuItem">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="menu-item" id="licenseManagementItem">
+                    <i class="fas fa-key"></i>
+                    <span>License Management</span>
+                </div>
+                
+                <div class="sidebar-divider"></div>
+                
+                <!-- Rating Box -->
+                <div class="rating-box">
+                    <h3>Rate Us</h3>
+                    <p>Love LeadSpry? Rate us!</p>
+                    <div class="stars">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+                
+                <!-- Buy License Button -->
+                <div class="buy-license-container">
+                    <button id="buyLicenseBtn" class="buy-license-btn">
+                        <i class="fas fa-crown"></i>
+                        Buy Pro License
+                    </button>
+                </div>
+
+                <!-- Language Selector -->
+                <div class="language-selector-container">
+                    <div class="language-selector">
+                        <i class="fas fa-globe"></i>
+                        <select id="languageSelect" class="language-select">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                            <option value="de">Deutsch</option>
+                            <option value="it">Italiano</option>
+                            <option value="pt">Português</option>
+                            <option value="ru">Русский</option>
+                            <option value="zh">中文</option>
+                            <option value="ja">日本語</option>
+                            <option value="ko">한국어</option>
+                            <option value="ar">العربية</option>
+                            <option value="hi">हिंदी</option>
+                            <option value="nl">Nederlands</option>
+                            <option value="pl">Polski</option>
+                            <option value="tr">Türkçe</option>
+                            <option value="vi">Tiếng Việt</option>
+                            <option value="th">ไทย</option>
+                            <option value="id">Bahasa Indonesia</option>
+                            <option value="ms">Bahasa Melayu</option>
+                            <option value="fa">فارسی</option>
+                            <option value="he">עברית</option>
+                            <option value="el">Ελληνικά</option>
+                            <option value="ro">Română</option>
+                            <option value="hu">Magyar</option>
+                            <option value="cs">Čeština</option>
+                            <option value="sv">Svenska</option>
+                            <option value="da">Dansk</option>
+                            <option value="fi">Suomi</option>
+                            <option value="no">Norsk</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Header -->
+        <div class="header">
+            <h2>LeadSpry Dashboard</h2>
+            <div class="user-profile">
+                <div id="proStatus" class="pro-badge">FREE</div>
+                <button id="upgradeBtn" class="upgrade-btn">⭐ Upgrade to PRO</button>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Dashboard Content -->
+            <div id="dashboardContent">
+                <!-- Stats Cards -->
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <h3>Total Leads Found</h3>
+                        <div class="stat-value" id="totalLeadsCount">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Email Addresses</h3>
+                        <div class="stat-value" id="emailCount">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Phone Numbers</h3>
+                        <div class="stat-value" id="phoneCount">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Exports</h3>
+                        <div class="stat-value" id="exportCount">0</div>
+                    </div>
+                </div>
+                
+                <!-- Search Container -->
+                <div class="search-container">
+                    <h2>Search for Leads</h2>
+                    <div class="search-grid">
+                        <div class="input-group">
+                            <label for="platformSelect">Platform</label>
+                            <div id="platformSelect" class="custom-select">
+                                <div class="custom-select-selected">Select a platform</div>
+                                <div class="custom-select-options">
+                                    <div class="custom-select-option" data-value="LinkedIn">LinkedIn</div>
+                                    <div class="custom-select-option" data-value="Instagram">Instagram</div>
+                                    <div class="custom-select-option" data-value="Facebook">Facebook</div>
+                                    <div class="custom-select-option" data-value="Twitter">Twitter</div>
+                                    <div class="custom-select-option" data-value="TikTok">TikTok</div>
+                                    <div class="custom-select-option" data-value="YouTube">YouTube</div>
+                                    <div class="custom-select-option" data-value="Quora">Quora</div>
+                                    <div class="custom-select-option" data-value="Reddit">Reddit</div>
+                                    <div class="custom-select-option" data-value="Website">Website</div>
+                                    <div id="allWebsitesOption" class="custom-select-option" data-value="All Websites">All Websites <span class="pro-badge">PRO</span></div>
+                                    <div class="custom-select-option" data-value="Other">Other</div>
+                                </div>
+                            </div>
+                            <input type="text" id="otherPlatformInput" placeholder="Enter platform name" style="display: none;">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="countrySelect">Country</label>
+                            <div id="countrySelect" class="custom-select">
+                                <div class="custom-select-selected">Select a country</div>
+                                <div class="custom-select-options">
+                                    <div class="custom-select-option" data-value="United Kingdom">United Kingdom (+44)</div>
+                                    <div class="custom-select-option" data-value="United States">United States (+1)</div>
+                                    <div class="custom-select-option" data-value="Afghanistan">Afghanistan (+93)</div>
+                                    <div class="custom-select-option" data-value="Albania">Albania (+355)</div>
+                                    <div class="custom-select-option" data-value="Argentina">Argentina (+54)</div>
+                                    <div class="custom-select-option" data-value="Australia">Australia (+61)</div>
+                                    <div class="custom-select-option" data-value="Austria">Austria (+43)</div>
+                                    <div class="custom-select-option" data-value="Bangladesh">Bangladesh (+880)</div>
+                                    <div class="custom-select-option" data-value="Belgium">Belgium (+32)</div>
+                                    <div class="custom-select-option" data-value="Brazil">Brazil (+55)</div>
+                                    <div class="custom-select-option" data-value="Canada">Canada (+1)</div>
+                                    <div class="custom-select-option" data-value="Chile">Chile (+56)</div>
+                                    <div class="custom-select-option" data-value="China">China (+86)</div>
+                                    <div class="custom-select-option" data-value="Colombia">Colombia (+57)</div>
+                                    <div class="custom-select-option" data-value="Denmark">Denmark (+45)</div>
+                                    <div class="custom-select-option" data-value="Egypt">Egypt (+20)</div>
+                                    <div class="custom-select-option" data-value="Finland">Finland (+358)</div>
+                                    <div class="custom-select-option" data-value="France">France (+33)</div>
+                                    <div class="custom-select-option" data-value="Germany">Germany (+49)</div>
+                                    <div class="custom-select-option" data-value="India">India (+91)</div>
+                                    <div class="custom-select-option" data-value="Indonesia">Indonesia (+62)</div>
+                                    <div class="custom-select-option" data-value="Ireland">Ireland (+353)</div>
+                                    <div class="custom-select-option" data-value="Italy">Italy (+39)</div>
+                                    <div class="custom-select-option" data-value="Japan">Japan (+81)</div>
+                                    <div class="custom-select-option" data-value="Malaysia">Malaysia (+60)</div>
+                                    <div class="custom-select-option" data-value="Mexico">Mexico (+52)</div>
+                                    <div class="custom-select-option" data-value="Netherlands">Netherlands (+31)</div>
+                                    <div class="custom-select-option" data-value="New Zealand">New Zealand (+64)</div>
+                                    <div class="custom-select-option" data-value="Nigeria">Nigeria (+234)</div>
+                                    <div class="custom-select-option" data-value="Norway">Norway (+47)</div>
+                                    <div class="custom-select-option" data-value="Pakistan">Pakistan (+92)</div>
+                                    <div class="custom-select-option" data-value="Philippines">Philippines (+63)</div>
+                                    <div class="custom-select-option" data-value="Poland">Poland (+48)</div>
+                                    <div class="custom-select-option" data-value="Portugal">Portugal (+351)</div>
+                                    <div class="custom-select-option" data-value="Russia">Russia (+7)</div>
+                                    <div class="custom-select-option" data-value="Saudi Arabia">Saudi Arabia (+966)</div>
+                                    <div class="custom-select-option" data-value="Singapore">Singapore (+65)</div>
+                                    <div class="custom-select-option" data-value="South Africa">South Africa (+27)</div>
+                                    <div class="custom-select-option" data-value="South Korea">South Korea (+82)</div>
+                                    <div class="custom-select-option" data-value="Spain">Spain (+34)</div>
+                                    <div class="custom-select-option" data-value="Sweden">Sweden (+46)</div>
+                                    <div class="custom-select-option" data-value="Switzerland">Switzerland (+41)</div>
+                                    <div class="custom-select-option" data-value="Thailand">Thailand (+66)</div>
+                                    <div class="custom-select-option" data-value="Turkey">Turkey (+90)</div>
+                                    <div class="custom-select-option" data-value="United Arab Emirates">United Arab Emirates (+971)</div>
+                                    <div class="custom-select-option" data-value="Vietnam">Vietnam (+84)</div>
+                                    <div class="custom-select-option" data-value="Zimbabwe">Zimbabwe (+263)</div>
+                                    <div id="proCountriesOption" class="custom-select-option" data-value="All Countries">All Countries <span class="pro-badge">PRO</span></div>
+                                    <div class="custom-select-option" data-value="Other">Other</div>
+                                </div>
+                            </div>
+                            <input type="text" id="otherCountryInput" placeholder="Enter country or city">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="keywordInput">Keywords</label>
+                            <input type="text" id="keywordInput" placeholder="Enter keywords (e.g. marketing agency)">
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="gmailCheckbox"> Include Gmail</label>
+                        <label><input type="checkbox" id="phoneCheckbox"> Include Phone</label>
+                    </div>
+                    
+                    <div class="button-group">
+                        <button id="searchAndScrape">🔍 Search</button>
+                        <button id="downloadExcel">⬇️ Export</button>
+                    </div>
+                </div>
+                
+                <!-- Results Container -->
+                <div class="results-container">
+                    <div class="results-header">
+                        <span class="results-count">Results: <span id="resultCount">0</span></span>
+                        <a id="unlockFeaturesLink" href="#" class="unlock-link">⭐ Unlock all features</a>
+                    </div>
+                    <div class="results-body" id="results"></div>
+                    <button id="loadMore" class="load-more" style="display: none;">Load More</button>
+                    <div id="status"></div>
+                </div>
+            </div>
+            
+            <!-- License Details Content -->
+            <div id="licenseDetailsContent" style="display: none;">
+                <div class="license-details-container">
+                    <h2><i class="fas fa-key"></i> License Details</h2>
+                    
+                    <div class="license-status-card">
+                        <div id="mainLicenseStatus">
+                            <!-- This will be filled dynamically -->
+                            <div class="license-placeholder">
+                                <p>Loading license details...</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="license-actions">
+                        <h3>License Management</h3>
+                        <div class="license-form">
+                            <div class="input-group">
+                                <label for="mainLicenseKeyInput">License Key</label>
+                                <input type="text" id="mainLicenseKeyInput" placeholder="Enter your license key">
+                            </div>
+                            <div class="button-group">
+                                <button id="mainVerifyLicenseBtn" class="primary-btn">
+                                    <i class="fas fa-check-circle"></i> Verify License
+                                </button>
+                                <button id="mainGetLicenseBtn" class="secondary-btn">
+                                    <i class="fas fa-shopping-cart"></i> Get a License
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="license-benefits">
+                        <h3>PRO Benefits</h3>
+                        <ul class="benefits-list">
+                            <li><i class="fas fa-check"></i> Unlimited lead generation runs</li>
+                            <li><i class="fas fa-check"></i> Access to all websites search</li>
+                            <li><i class="fas fa-check"></i> Global country search</li>
+                            <li><i class="fas fa-check"></i> Export unlimited results</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- License Modal -->
+    <div id="licenseModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Activate PRO License</h2>
+                <button id="closeLicenseModal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Enter your license key to unlock all PRO features:</p>
+                <div class="input-group" style="margin-top: 15px;">
+                    <input type="text" id="licenseKeyInput" placeholder="Enter your license key">
+                </div>
+                <div class="button-group" style="margin-top: 20px;">
+                    <button id="verifyLicenseBtn" style="background-color: #4776E6; color: white;">Verify License</button>
+                    <button id="getLicenseBtn" style="background-color: #FFC107; color: black;">Get a License</button>
+                </div>
+                <div id="licenseStatus" style="margin-top: 15px;"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Suggestion Modal -->
+    <div id="suggestionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>How to Use LeadSpy Pro</h2>
+                <button id="closeSuggestionModal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h3>Pro Tips</h3>
+                <ul>
+                    <li>Use specific keywords for better results</li>
+                    <li>Combine platform and country filters</li>
+                    <li>To generate bulk results, select the Email checkbox. Avoid selecting the Phone checkbox simultaneously, as phone numbers are listed less frequently compared to email addresses, which may limit the results.</li>
+                    <li>For bulk leads data, prioritize selecting platforms like Facebook, Instagram, and Websites, as they provide extensive lead information.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/i18n.js"></script>
+    <script src="dashboard.js"></script>
+    
+</body>
+</html> 

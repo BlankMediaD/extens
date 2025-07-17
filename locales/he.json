@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "לוח בקרה",
+        "searchAndScrape": "חיפוש ומיצוי",
+        "downloadExcel": "הורד Excel",
+        "status": "סטטוס",
+        "results": "תוצאות",
+        "totalLeads": "סה\"כ לידים",
+        "emails": "כתובות אימייל",
+        "phones": "מספרי טלפון",
+        "exports": "ייצוא",
+        "leadGenRuns": "ריצות יצירת לידים"
+    },
+    "license": {
+        "title": "ניהול רישיון",
+        "proStatus": "פרו",
+        "freeStatus": "חינמי",
+        "verifyLicense": "אימות רישיון",
+        "buyLicense": "קניית רישיון פרו",
+        "licenseKey": "מפתח רישיון",
+        "upgrade": "שדרוג לפרו",
+        "unlockFeatures": "שחרור כל התכונות",
+        "expired": "רישיון פג תוקף",
+        "error": "אימות רישיון נכשל"
+    },
+    "captcha": {
+        "detected": "זוהה קוד CAPTCHA",
+        "solving": "מנסה לפתור את ה-CAPTCHA באופן אוטומטי...",
+        "manualRequired": "נדרש פתרון ידני של ה-CAPTCHA",
+        "solved": "ה-CAPTCHA נפתר",
+        "resumed": "המיצוי חודש",
+        "focusButton": "מיקוד על לשונית ה-CAPTCHA"
+    },
+    "rating": {
+        "title": "דרג אותנו",
+        "subtitle": "האם אהבת את LeadSpry? דרג אותנו!",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "מילות מפתח",
+        "platform": "פלטפורמה",
+        "country": "מדינה",
+        "other": "אחר",
+        "includeGmail": "כלול Gmail",
+        "includePhone": "כלול טלפון",
+        "searching": "מחפש ומוציא...",
+        "completed": "המיצוי הושלם!",
+        "noResults": "לא נמצאו תוצאות."
+    },
+    "errors": {
+        "limitReached": "הגעת למגבלת הגרסה החינמית! שדרג כדי להמשיך.",
+        "noResults": "אין תוצאות לייצוא!",
+        "verificationFailed": "אימות נכשל"
+    },
+    "language": {
+        "select": "בחר שפה",
+        "en": "אנגלית",
+        "es": "ספרדית",
+        "fr": "צרפתית",
+        "de": "גרמנית",
+        "it": "איטלקית",
+        "pt": "פורטוגזית",
+        "ru": "רוסית",
+        "zh": "סינית",
+        "ja": "יפנית",
+        "ko": "קוריאנית",
+        "ar": "ערבית",
+        "hi": "הינדית",
+        "nl": "הולנדית",
+        "pl": "פולנית",
+        "tr": "טורקית",
+        "vi": "וייטנמית",
+        "th": "תאית",
+        "id": "אינדונזית",
+        "ms": "מלאית",
+        "fa": "פרסית",
+        "he": "עברית",
+        "el": "יוונית",
+        "ro": "רומנית",
+        "hu": "הונגרית",
+        "cs": "צ'כית",
+        "sv": "שוודית",
+        "da": "דנית",
+        "fi": "פינית",
+        "no": "נורווגית"
+    },
+    "extension": {
+        "name": "LeadSpry - כלי ליצירת לידים",
+        "description": "כלי רב עוצמה ליצירת לידים למציאת אנשי קשר עסקיים במספר פלטפורמות"
+    }
+} 

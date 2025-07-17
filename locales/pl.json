@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "Panel Sterowania",
+        "searchAndScrape": "Szukaj i Ekstrahuj",
+        "downloadExcel": "Pobierz Excel",
+        "status": "Status",
+        "results": "Wyniki",
+        "totalLeads": "Łącznie Leadów",
+        "emails": "E-maile",
+        "phones": "Telefony",
+        "exports": "Eksporty",
+        "leadGenRuns": "Uruchomienia Generowania"
+    },
+    "license": {
+        "title": "Zarządzanie Licencją",
+        "proStatus": "PRO",
+        "freeStatus": "DARMOWA",
+        "verifyLicense": "Sprawdź Licencję",
+        "buyLicense": "Kup Licencję Pro",
+        "licenseKey": "Klucz Licencji",
+        "upgrade": "Ulepsz do Pro",
+        "unlockFeatures": "Odblokuj Wszystkie Funkcje",
+        "expired": "Licencja Wygasła",
+        "error": "Błąd Weryfikacji Licencji"
+    },
+    "captcha": {
+        "detected": "Wykryto CAPTCHA",
+        "solving": "Próba automatycznego rozwiązania CAPTCHA...",
+        "manualRequired": "Wymagane Ręczne Rozwiązanie CAPTCHA",
+        "solved": "CAPTCHA Rozwiązana",
+        "resumed": "Ekstrakcja Wznowiona",
+        "focusButton": "Skup na Zakładce CAPTCHA"
+    },
+    "rating": {
+        "title": "Oceń Nas",
+        "subtitle": "Czy podoba Ci się LeadSpry? Oceń nas!",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "Słowa Kluczowe",
+        "platform": "Platforma",
+        "country": "Kraj",
+        "other": "Inne",
+        "includeGmail": "Uwzględnij Gmail",
+        "includePhone": "Uwzględnij Telefon",
+        "searching": "Wyszukiwanie i ekstrakcja w toku...",
+        "completed": "Ekstrakcja zakończona!",
+        "noResults": "Nie znaleziono wyników."
+    },
+    "errors": {
+        "limitReached": "Osiągnięto limit wersji darmowej! Ulepsz, aby kontynuować.",
+        "noResults": "Brak wyników do eksportu!",
+        "verificationFailed": "Weryfikacja nie powiodła się"
+    },
+    "extension": {
+        "name": "LeadSpry - Narzędzie do Generowania Leadów",
+        "description": "Potężne narzędzie do generowania leadów do znajdowania kontaktów biznesowych na wielu platformach"
+    },
+    "language": {
+        "select": "Wybierz Język",
+        "en": "Angielski",
+        "es": "Hiszpański",
+        "fr": "Francuski",
+        "de": "Niemiecki",
+        "it": "Włoski",
+        "pt": "Portugalski",
+        "ru": "Rosyjski",
+        "zh": "Chiński",
+        "ja": "Japoński",
+        "ko": "Koreański",
+        "ar": "Arabski",
+        "hi": "Hindi",
+        "nl": "Holenderski",
+        "pl": "Polski",
+        "tr": "Turecki",
+        "vi": "Wietnamski",
+        "th": "Tajski",
+        "id": "Indonezyjski",
+        "ms": "Malajski",
+        "fa": "Perski",
+        "he": "Hebrajski",
+        "el": "Grecki",
+        "ro": "Rumuński",
+        "hu": "Węgierski",
+        "cs": "Czeski",
+        "sv": "Szwedzki",
+        "da": "Duński",
+        "fi": "Fiński",
+        "no": "Norweski"
+    }
+} 

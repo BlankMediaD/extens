@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "Papan Pemuka",
+        "searchAndScrape": "Cari & Ekstrak",
+        "downloadExcel": "Muat Turun Excel",
+        "status": "Status",
+        "results": "Keputusan",
+        "totalLeads": "Jumlah Lead",
+        "emails": "E-mel",
+        "phones": "Telefon",
+        "exports": "Eksport",
+        "leadGenRuns": "Jalankan Generasi Lead"
+    },
+    "license": {
+        "title": "Pengurusan Lesen",
+        "proStatus": "PRO",
+        "freeStatus": "PERCUMA",
+        "verifyLicense": "Sahkan Lesen",
+        "buyLicense": "Beli Lesen Pro",
+        "licenseKey": "Kunci Lesen",
+        "upgrade": "Tingkatkan ke Pro",
+        "unlockFeatures": "Buka Semua Ciri",
+        "expired": "Lesen Tamat Tempoh",
+        "error": "Pengesahan Lesen Gagal"
+    },
+    "captcha": {
+        "detected": "CAPTCHA Dikesan",
+        "solving": "Cuba menyelesaikan CAPTCHA secara automatik...",
+        "manualRequired": "Penyelesaian CAPTCHA Manual Diperlukan",
+        "solved": "CAPTCHA Diselesaikan",
+        "resumed": "Ekstraksi Disambung",
+        "focusButton": "Fokus ke Tab CAPTCHA"
+    },
+    "rating": {
+        "title": "Nilai Kami",
+        "subtitle": "Adakah anda suka LeadSpry? Nilai kami!",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "Kata Kunci",
+        "platform": "Platform",
+        "country": "Negara",
+        "other": "Lain-lain",
+        "includeGmail": "Termasuk Gmail",
+        "includePhone": "Termasuk Telefon",
+        "searching": "Mencari dan mengekstrak...",
+        "completed": "Ekstraksi selesai!",
+        "noResults": "Tiada keputusan dijumpai."
+    },
+    "errors": {
+        "limitReached": "Had versi percuma dicapai! Tingkatkan untuk meneruskan.",
+        "noResults": "Tiada keputusan untuk dieksport!",
+        "verificationFailed": "Pengesahan gagal"
+    },
+    "language": {
+        "select": "Pilih Bahasa",
+        "en": "Bahasa Inggeris",
+        "es": "Bahasa Sepanyol",
+        "fr": "Bahasa Perancis",
+        "de": "Bahasa Jerman",
+        "it": "Bahasa Itali",
+        "pt": "Bahasa Portugis",
+        "ru": "Bahasa Rusia",
+        "zh": "Bahasa Cina",
+        "ja": "Bahasa Jepun",
+        "ko": "Bahasa Korea",
+        "ar": "Bahasa Arab",
+        "hi": "Bahasa Hindi",
+        "nl": "Bahasa Belanda",
+        "pl": "Bahasa Poland",
+        "tr": "Bahasa Turki",
+        "vi": "Bahasa Vietnam",
+        "th": "Bahasa Thai",
+        "id": "Bahasa Indonesia",
+        "ms": "Bahasa Melayu",
+        "fa": "Bahasa Parsi",
+        "he": "Bahasa Ibrani",
+        "el": "Bahasa Yunani",
+        "ro": "Bahasa Romania",
+        "hu": "Bahasa Hungary",
+        "cs": "Bahasa Czech",
+        "sv": "Bahasa Sweden",
+        "da": "Bahasa Denmark",
+        "fi": "Bahasa Finland",
+        "no": "Bahasa Norway"
+    },
+    "extension": {
+        "name": "LeadSpry - Alat Penjanaan Prospek",
+        "description": "Alat penjanaan prospek yang berkuasa untuk mencari kenalan perniagaan di pelbagai platform"
+    }
+} 

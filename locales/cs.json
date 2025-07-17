@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "Ovládací Panel",
+        "searchAndScrape": "Vyhledávání a Extrakce",
+        "downloadExcel": "Stáhnout Excel",
+        "status": "Stav",
+        "results": "Výsledky",
+        "totalLeads": "Celkem Leadů",
+        "emails": "Emailové Adresy",
+        "phones": "Telefonní Čísla",
+        "exports": "Exporty",
+        "leadGenRuns": "Spuštění Generování Leadů"
+    },
+    "license": {
+        "title": "Správa Licence",
+        "proStatus": "Pro",
+        "freeStatus": "Zdarma",
+        "verifyLicense": "Ověření Licence",
+        "buyLicense": "Koupit Pro Licenci",
+        "licenseKey": "Licenční Klíč",
+        "upgrade": "Upgrade na Pro",
+        "unlockFeatures": "Odemknutí Všech Funkcí",
+        "expired": "Licence Vypršela",
+        "error": "Ověření Licence Selhalo"
+    },
+    "captcha": {
+        "detected": "Detekován CAPTCHA",
+        "solving": "Pokus o automatické vyřešení CAPTCHA...",
+        "manualRequired": "Vyžadováno manuální vyřešení CAPTCHA",
+        "solved": "CAPTCHA Vyřešeno",
+        "resumed": "Extrakce Obnovena",
+        "focusButton": "Zaměření na Záložku CAPTCHA"
+    },
+    "rating": {
+        "title": "Ohodnoťte Nás",
+        "subtitle": "Líbí se vám LeadSpry? Ohodnoťte nás!",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "Klíčová Slova",
+        "platform": "Platforma",
+        "country": "Země",
+        "other": "Ostatní",
+        "includeGmail": "Zahrnout Gmail",
+        "includePhone": "Zahrnout Telefon",
+        "searching": "Vyhledávání a extrakce...",
+        "completed": "Extrakce Dokončena!",
+        "noResults": "Nebyly nalezeny žádné výsledky."
+    },
+    "errors": {
+        "limitReached": "Dosáhli jste limitu bezplatné verze! Upgradujte na Pro pro pokračování.",
+        "noResults": "Nejsou žádné výsledky k exportu!",
+        "verificationFailed": "Ověření selhalo"
+    },
+    "extension": {
+        "name": "LeadSpry - Nástroj pro Generování Leadů",
+        "description": "Výkonný nástroj pro generování leadů k nalezení obchodních kontaktů napříč různými platformami"
+    },
+    "language": {
+        "select": "Výběr Jazyka",
+        "en": "Angličtina",
+        "es": "Španělština",
+        "fr": "Francouzština",
+        "de": "Němčina",
+        "it": "Italština",
+        "pt": "Portugalština",
+        "ru": "Ruština",
+        "zh": "Čínština",
+        "ja": "Japonština",
+        "ko": "Korejština",
+        "ar": "Arabština",
+        "hi": "Hindština",
+        "nl": "Nizozemština",
+        "pl": "Polština",
+        "tr": "Turečtina",
+        "vi": "Vietnamština",
+        "th": "Thajština",
+        "id": "Indonéština",
+        "ms": "Malajština",
+        "fa": "Perština",
+        "he": "Hebrejština",
+        "el": "Řečtina",
+        "ro": "Rumunština",
+        "hu": "Maďarština",
+        "cs": "Čeština",
+        "sv": "Švédština",
+        "da": "Dánština",
+        "fi": "Finština",
+        "no": "Norština"
+    }
+} 

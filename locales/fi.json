@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "Hallintapaneeli",
+        "searchAndScrape": "Haku ja Poiminta",
+        "downloadExcel": "Lataa Excel",
+        "status": "Tila",
+        "results": "Tulokset",
+        "totalLeads": "Yhteensä Liidejä",
+        "emails": "Sähköpostiosoitteet",
+        "phones": "Puhelinnumerot",
+        "exports": "Vie",
+        "leadGenRuns": "Liidien Generointi Suoritukset"
+    },
+    "license": {
+        "title": "Lisenssin Hallinta",
+        "proStatus": "Pro",
+        "freeStatus": "Ilmainen",
+        "verifyLicense": "Vahvista Lisenssi",
+        "buyLicense": "Osta Pro-lisenssi",
+        "licenseKey": "Lisenssiavain",
+        "upgrade": "Päivitä Pro-versioon",
+        "unlockFeatures": "Avaa Kaikki Ominaisuudet",
+        "expired": "Lisenssi Vanhentunut",
+        "error": "Lisenssin Vahvistus Epäonnistui"
+    },
+    "captcha": {
+        "detected": "CAPTCHA Havaittu",
+        "solving": "Yritetään ratkaista CAPTCHA automaattisesti...",
+        "manualRequired": "Manuaalinen CAPTCHA-ratkaisu Vaaditaan",
+        "solved": "CAPTCHA Ratkaistu",
+        "resumed": "Poiminta Jatkettu",
+        "focusButton": "Keskity CAPTCHA-välilehteen"
+    },
+    "rating": {
+        "title": "Arvioi Meidät",
+        "subtitle": "Pidätkö LeadSprystä? Arvioi meidät!",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "Avainsanat",
+        "platform": "Alusta",
+        "country": "Maa",
+        "other": "Muu",
+        "includeGmail": "Sisällytä Gmail",
+        "includePhone": "Sisällytä Puhelin",
+        "searching": "Haetaan ja poimitaan...",
+        "completed": "Poiminta Valmis!",
+        "noResults": "Tuloksia ei löytynyt."
+    },
+    "errors": {
+        "limitReached": "Olet saavuttanut ilmaisen version rajan! Päivitä Pro-versioon jatkaaksesi.",
+        "noResults": "Ei tuloksia vietäväksi!",
+        "verificationFailed": "Vahvistus epäonnistui"
+    },
+    "language": {
+        "select": "Valitse Kieli",
+        "en": "Englanti",
+        "es": "Espanja",
+        "fr": "Ranska",
+        "de": "Saksa",
+        "it": "Italia",
+        "pt": "Portugali",
+        "ru": "Venäjä",
+        "zh": "Kiina",
+        "ja": "Japani",
+        "ko": "Korea",
+        "ar": "Arabia",
+        "hi": "Hindi",
+        "nl": "Hollanti",
+        "pl": "Puola",
+        "tr": "Turkki",
+        "vi": "Vietnam",
+        "th": "Thaimaa",
+        "id": "Indonesia",
+        "ms": "Malaiji",
+        "fa": "Persia",
+        "he": "Heprea",
+        "el": "Kreikka",
+        "ro": "Romania",
+        "hu": "Unkari",
+        "cs": "Tšekki",
+        "sv": "Ruotsi",
+        "da": "Tanska",
+        "fi": "Suomi",
+        "no": "Norja"
+    },
+    "extension": {
+        "name": "LeadSpry - Liidien Generointityökalu",
+        "description": "Tehokas liidien generointityökalu liikeyhteystietojen löytämiseen eri alustoilta"
+    }
+} 

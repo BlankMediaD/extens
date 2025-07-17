@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "仪表板",
+        "searchAndScrape": "搜索和提取",
+        "downloadExcel": "下载Excel",
+        "status": "状态",
+        "results": "结果",
+        "totalLeads": "总线索",
+        "emails": "电子邮件",
+        "phones": "电话",
+        "exports": "导出",
+        "leadGenRuns": "生成运行"
+    },
+    "license": {
+        "title": "许可证管理",
+        "proStatus": "专业版",
+        "freeStatus": "免费版",
+        "verifyLicense": "验证许可证",
+        "buyLicense": "购买专业版许可证",
+        "licenseKey": "许可证密钥",
+        "upgrade": "升级到专业版",
+        "unlockFeatures": "解锁所有功能",
+        "expired": "许可证已过期",
+        "error": "许可证验证失败"
+    },
+    "captcha": {
+        "detected": "检测到验证码",
+        "solving": "正在尝试自动解决验证码...",
+        "manualRequired": "需要手动解决验证码",
+        "solved": "验证码已解决",
+        "resumed": "提取已恢复",
+        "focusButton": "聚焦验证码标签页"
+    },
+    "rating": {
+        "title": "评价我们",
+        "subtitle": "喜欢LeadSpry吗？给我们评分！",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "关键词",
+        "platform": "平台",
+        "country": "国家",
+        "other": "其他",
+        "includeGmail": "包含Gmail",
+        "includePhone": "包含电话",
+        "searching": "正在搜索和提取...",
+        "completed": "提取完成！",
+        "noResults": "未找到结果。"
+    },
+    "errors": {
+        "limitReached": "已达到免费版限制！请升级以继续。",
+        "noResults": "没有可导出的结果！",
+        "verificationFailed": "验证失败"
+    },
+    "language": {
+        "select": "选择语言",
+        "en": "英语",
+        "es": "西班牙语",
+        "fr": "法语",
+        "de": "德语",
+        "it": "意大利语",
+        "pt": "葡萄牙语",
+        "ru": "俄语",
+        "zh": "中文",
+        "ja": "日语",
+        "ko": "韩语",
+        "ar": "阿拉伯语",
+        "hi": "印地语",
+        "nl": "荷兰语",
+        "pl": "波兰语",
+        "tr": "土耳其语",
+        "vi": "越南语",
+        "th": "泰语",
+        "id": "印尼语",
+        "ms": "马来语",
+        "fa": "波斯语",
+        "he": "希伯来语",
+        "el": "希腊语",
+        "ro": "罗马尼亚语",
+        "hu": "匈牙利语",
+        "cs": "捷克语",
+        "sv": "瑞典语",
+        "da": "丹麦语",
+        "fi": "芬兰语",
+        "no": "挪威语"
+    },
+    "extension": {
+        "name": "LeadSpry - 潜在客户生成工具",
+        "description": "强大的潜在客户生成工具，可在多个平台上查找业务联系人"
+    }
+} 

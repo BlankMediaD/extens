@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "Dashboard",
+        "searchAndScrape": "Zoeken & Extraheren",
+        "downloadExcel": "Excel Downloaden",
+        "status": "Status",
+        "results": "Resultaten",
+        "totalLeads": "Totaal Leads",
+        "emails": "E-mails",
+        "phones": "Telefoonnummers",
+        "exports": "Exports",
+        "leadGenRuns": "Lead Generatie Runs"
+    },
+    "license": {
+        "title": "Licentiebeheer",
+        "proStatus": "PRO",
+        "freeStatus": "GRATIS",
+        "verifyLicense": "Licentie Verifiëren",
+        "buyLicense": "Pro Licentie Kopen",
+        "licenseKey": "Licentiesleutel",
+        "upgrade": "Upgraden naar Pro",
+        "unlockFeatures": "Alle Functies Ontgrendelen",
+        "expired": "Licentie Verlopen",
+        "error": "Licentieverificatie Mislukt"
+    },
+    "captcha": {
+        "detected": "CAPTCHA Gedetecteerd",
+        "solving": "Poging tot automatische CAPTCHA-oplossing...",
+        "manualRequired": "Handmatige CAPTCHA-oplossing Vereist",
+        "solved": "CAPTCHA Opgelost",
+        "resumed": "Extractie Hervat",
+        "focusButton": "Focus op CAPTCHA Tab"
+    },
+    "rating": {
+        "title": "Beoordeel Ons",
+        "subtitle": "Vind je LeadSpry leuk? Beoordeel ons!",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "Trefwoorden",
+        "platform": "Platform",
+        "country": "Land",
+        "other": "Anders",
+        "includeGmail": "Gmail Inclusief",
+        "includePhone": "Telefoon Inclusief",
+        "searching": "Zoeken en extraheren in uitvoering...",
+        "completed": "Extractie voltooid!",
+        "noResults": "Geen resultaten gevonden."
+    },
+    "errors": {
+        "limitReached": "Gratis versie limiet bereikt! Upgrade om door te gaan.",
+        "noResults": "Geen resultaten om te exporteren!",
+        "verificationFailed": "Verificatie mislukt"
+    },
+    "extension": {
+        "name": "LeadSpry - Lead Generatie Tool",
+        "description": "Krachtige lead generatie tool voor het vinden van zakelijke contacten op verschillende platforms"
+    },
+    "language": {
+        "select": "Selecteer Taal",
+        "en": "Engels",
+        "es": "Spaans",
+        "fr": "Frans",
+        "de": "Duits",
+        "it": "Italiaans",
+        "pt": "Portugees",
+        "ru": "Russisch",
+        "zh": "Chinees",
+        "ja": "Japans",
+        "ko": "Koreaans",
+        "ar": "Arabisch",
+        "hi": "Hindi",
+        "nl": "Nederlands",
+        "pl": "Pools",
+        "tr": "Turks",
+        "vi": "Vietnamees",
+        "th": "Thais",
+        "id": "Indonesisch",
+        "ms": "Maleis",
+        "fa": "Perzisch",
+        "he": "Hebreeuws",
+        "el": "Grieks",
+        "ro": "Roemeens",
+        "hu": "Hongaars",
+        "cs": "Tsjechisch",
+        "sv": "Zweeds",
+        "da": "Deens",
+        "fi": "Fins",
+        "no": "Noors"
+    }
+} 

@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "Tablou de Bord",
+        "searchAndScrape": "Căutare și Extragere",
+        "downloadExcel": "Descarcă Excel",
+        "status": "Stare",
+        "results": "Rezultate",
+        "totalLeads": "Total Lead-uri",
+        "emails": "Adrese Email",
+        "phones": "Telefoane",
+        "exports": "Exporturi",
+        "leadGenRuns": "Rulări Generare Lead-uri"
+    },
+    "license": {
+        "title": "Gestionare Licență",
+        "proStatus": "Pro",
+        "freeStatus": "Gratuit",
+        "verifyLicense": "Verificare Licență",
+        "buyLicense": "Cumpără Licență Pro",
+        "licenseKey": "Cheie Licență",
+        "upgrade": "Upgrade la Pro",
+        "unlockFeatures": "Deblochează Toate Funcționalitățile",
+        "expired": "Licența a Expirat",
+        "error": "Verificarea Licenței a Eșuat"
+    },
+    "captcha": {
+        "detected": "CAPTCHA Detectat",
+        "solving": "Încercare de rezolvare automată CAPTCHA...",
+        "manualRequired": "Necesită rezolvare manuală CAPTCHA",
+        "solved": "CAPTCHA Rezolvat",
+        "resumed": "Extragerea a Reluat",
+        "focusButton": "Focus pe Tab-ul CAPTCHA"
+    },
+    "rating": {
+        "title": "Evaluează-ne",
+        "subtitle": "Îți place LeadSpry? Evaluează-ne!",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "Cuvinte cheie",
+        "platform": "Platformă",
+        "country": "Țară",
+        "other": "Altele",
+        "includeGmail": "Include Gmail",
+        "includePhone": "Include Telefon",
+        "searching": "Căutare și extragere...",
+        "completed": "Extragerea S-a Finalizat!",
+        "noResults": "Nu s-au găsit rezultate."
+    },
+    "errors": {
+        "limitReached": "Ai atins limita versiunii gratuite! Upgrade pentru a continua.",
+        "noResults": "Nu există rezultate pentru export!",
+        "verificationFailed": "Verificare eșuată"
+    },
+    "language": {
+        "select": "Selectează Limba",
+        "en": "Engleză",
+        "es": "Spaniolă",
+        "fr": "Franceză",
+        "de": "Germană",
+        "it": "Italiană",
+        "pt": "Portugheză",
+        "ru": "Rusă",
+        "zh": "Chineză",
+        "ja": "Japoneză",
+        "ko": "Coreeană",
+        "ar": "Arabă",
+        "hi": "Hindi",
+        "nl": "Olandeză",
+        "pl": "Poloneză",
+        "tr": "Turcă",
+        "vi": "Vietnameză",
+        "th": "Thailandeză",
+        "id": "Indoneziană",
+        "ms": "Malaeziană",
+        "fa": "Persană",
+        "he": "Ebraică",
+        "el": "Greacă",
+        "ro": "Română",
+        "hu": "Maghiară",
+        "cs": "Cehă",
+        "sv": "Suedeză",
+        "da": "Daneză",
+        "fi": "Finlandeză",
+        "no": "Norvegiană"
+    },
+    "extension": {
+        "name": "LeadSpry - Instrument de Generare Lead-uri",
+        "description": "Instrument puternic de generare lead-uri pentru găsirea contactelor de afaceri pe mai multe platforme"
+    }
+} 

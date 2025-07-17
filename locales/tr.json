@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "Kontrol Paneli",
+        "searchAndScrape": "Ara ve Çıkar",
+        "downloadExcel": "Excel İndir",
+        "status": "Durum",
+        "results": "Sonuçlar",
+        "totalLeads": "Toplam Müşteri Adayı",
+        "emails": "E-postalar",
+        "phones": "Telefonlar",
+        "exports": "Dışa Aktarmalar",
+        "leadGenRuns": "Müşteri Adayı Üretim Çalıştırmaları"
+    },
+    "license": {
+        "title": "Lisans Yönetimi",
+        "proStatus": "PRO",
+        "freeStatus": "ÜCRETSİZ",
+        "verifyLicense": "Lisansı Doğrula",
+        "buyLicense": "Pro Lisans Satın Al",
+        "licenseKey": "Lisans Anahtarı",
+        "upgrade": "Pro'ya Yükselt",
+        "unlockFeatures": "Tüm Özellikleri Aç",
+        "expired": "Lisans Süresi Doldu",
+        "error": "Lisans Doğrulama Başarısız"
+    },
+    "captcha": {
+        "detected": "CAPTCHA Tespit Edildi",
+        "solving": "CAPTCHA otomatik çözümü deneniyor...",
+        "manualRequired": "Manuel CAPTCHA Çözümü Gerekli",
+        "solved": "CAPTCHA Çözüldü",
+        "resumed": "Çıkarma İşlemi Devam Ediyor",
+        "focusButton": "CAPTCHA Sekmesine Odaklan"
+    },
+    "rating": {
+        "title": "Bizi Değerlendirin",
+        "subtitle": "LeadSpry'ı beğendiniz mi? Bizi değerlendirin!",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "Anahtar Kelimeler",
+        "platform": "Platform",
+        "country": "Ülke",
+        "other": "Diğer",
+        "includeGmail": "Gmail Dahil",
+        "includePhone": "Telefon Dahil",
+        "searching": "Arama ve çıkarma devam ediyor...",
+        "completed": "Çıkarma tamamlandı!",
+        "noResults": "Sonuç bulunamadı."
+    },
+    "errors": {
+        "limitReached": "Ücretsiz sürüm limitine ulaşıldı! Devam etmek için yükseltin.",
+        "noResults": "Dışa aktarılacak sonuç yok!",
+        "verificationFailed": "Doğrulama başarısız"
+    },
+    "extension": {
+        "name": "LeadSpry - Potansiyel Müşteri Oluşturma Aracı",
+        "description": "Birden fazla platformda iş bağlantıları bulmak için güçlü potansiyel müşteri oluşturma aracı"
+    },
+    "language": {
+        "select": "Dil Seçin",
+        "en": "İngilizce",
+        "es": "İspanyolca",
+        "fr": "Fransızca",
+        "de": "Almanca",
+        "it": "İtalyanca",
+        "pt": "Portekizce",
+        "ru": "Rusça",
+        "zh": "Çince",
+        "ja": "Japonca",
+        "ko": "Korece",
+        "ar": "Arapça",
+        "hi": "Hintçe",
+        "nl": "Hollandaca",
+        "pl": "Lehçe",
+        "tr": "Türkçe",
+        "vi": "Vietnamca",
+        "th": "Tayca",
+        "id": "Endonezce",
+        "ms": "Malayca",
+        "fa": "Farsça",
+        "he": "İbranice",
+        "el": "Yunanca",
+        "ro": "Romence",
+        "hu": "Macarca",
+        "cs": "Çekçe",
+        "sv": "İsveççe",
+        "da": "Danca",
+        "fi": "Fince",
+        "no": "Norveççe"
+    }
+} 

@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "ダッシュボード",
+        "searchAndScrape": "検索と抽出",
+        "downloadExcel": "Excelをダウンロード",
+        "status": "ステータス",
+        "results": "結果",
+        "totalLeads": "総リード数",
+        "emails": "メールアドレス",
+        "phones": "電話番号",
+        "exports": "エクスポート",
+        "leadGenRuns": "生成実行"
+    },
+    "license": {
+        "title": "ライセンス管理",
+        "proStatus": "プロ版",
+        "freeStatus": "無料版",
+        "verifyLicense": "ライセンスを確認",
+        "buyLicense": "プロ版ライセンスを購入",
+        "licenseKey": "ライセンスキー",
+        "upgrade": "プロ版にアップグレード",
+        "unlockFeatures": "全機能を解除",
+        "expired": "ライセンス期限切れ",
+        "error": "ライセンス確認エラー"
+    },
+    "captcha": {
+        "detected": "CAPTCHAを検出",
+        "solving": "CAPTCHAを自動解決中...",
+        "manualRequired": "手動CAPTCHA解決が必要",
+        "solved": "CAPTCHA解決済み",
+        "resumed": "抽出を再開",
+        "focusButton": "CAPTCHAタブにフォーカス"
+    },
+    "rating": {
+        "title": "評価する",
+        "subtitle": "LeadSpryが気に入りましたか？評価してください！",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "キーワード",
+        "platform": "プラットフォーム",
+        "country": "国",
+        "other": "その他",
+        "includeGmail": "Gmailを含める",
+        "includePhone": "電話番号を含める",
+        "searching": "検索と抽出中...",
+        "completed": "抽出完了！",
+        "noResults": "結果が見つかりません。"
+    },
+    "errors": {
+        "limitReached": "無料版の制限に達しました！続けるにはアップグレードしてください。",
+        "noResults": "エクスポートする結果がありません！",
+        "verificationFailed": "確認に失敗"
+    },
+    "language": {
+        "select": "言語を選択",
+        "en": "英語",
+        "es": "スペイン語",
+        "fr": "フランス語",
+        "de": "ドイツ語",
+        "it": "イタリア語",
+        "pt": "ポルトガル語",
+        "ru": "ロシア語",
+        "zh": "中国語",
+        "ja": "日本語",
+        "ko": "韓国語",
+        "ar": "アラビア語",
+        "hi": "ヒンディー語",
+        "nl": "オランダ語",
+        "pl": "ポーランド語",
+        "tr": "トルコ語",
+        "vi": "ベトナム語",
+        "th": "タイ語",
+        "id": "インドネシア語",
+        "ms": "マレー語",
+        "fa": "ペルシャ語",
+        "he": "ヘブライ語",
+        "el": "ギリシャ語",
+        "ro": "ルーマニア語",
+        "hu": "ハンガリー語",
+        "cs": "チェコ語",
+        "sv": "スウェーデン語",
+        "da": "デンマーク語",
+        "fi": "フィンランド語",
+        "no": "ノルウェー語"
+    },
+    "extension": {
+        "name": "LeadSpry - リード生成ツール",
+        "description": "複数のプラットフォームでビジネス連絡先を見つけるための強力なリード生成ツール"
+    }
+} 

@@ -1,0 +1,91 @@
+{
+    "dashboard": {
+        "title": "대시보드",
+        "searchAndScrape": "검색 및 추출",
+        "downloadExcel": "Excel 다운로드",
+        "status": "상태",
+        "results": "결과",
+        "totalLeads": "총 리드",
+        "emails": "이메일",
+        "phones": "전화번호",
+        "exports": "내보내기",
+        "leadGenRuns": "생성 실행"
+    },
+    "license": {
+        "title": "라이선스 관리",
+        "proStatus": "프로",
+        "freeStatus": "무료",
+        "verifyLicense": "라이선스 확인",
+        "buyLicense": "프로 라이선스 구매",
+        "licenseKey": "라이선스 키",
+        "upgrade": "프로로 업그레이드",
+        "unlockFeatures": "모든 기능 잠금 해제",
+        "expired": "라이선스 만료",
+        "error": "라이선스 확인 오류"
+    },
+    "captcha": {
+        "detected": "캡챠 감지됨",
+        "solving": "캡챠 자동 해결 시도 중...",
+        "manualRequired": "수동 캡챠 해결 필요",
+        "solved": "캡챠 해결됨",
+        "resumed": "추출 재개",
+        "focusButton": "캡챠 탭으로 포커스"
+    },
+    "rating": {
+        "title": "평가하기",
+        "subtitle": "LeadSpry가 마음에 드시나요? 평가해 주세요!",
+        "stars": "★"
+    },
+    "search": {
+        "keyword": "키워드",
+        "platform": "플랫폼",
+        "country": "국가",
+        "other": "기타",
+        "includeGmail": "Gmail 포함",
+        "includePhone": "전화번호 포함",
+        "searching": "검색 및 추출 중...",
+        "completed": "추출 완료!",
+        "noResults": "결과를 찾을 수 없습니다."
+    },
+    "errors": {
+        "limitReached": "무료 버전 한도에 도달했습니다! 계속하려면 업그레이드하세요.",
+        "noResults": "내보낼 결과가 없습니다!",
+        "verificationFailed": "확인 실패"
+    },
+    "extension": {
+        "name": "LeadSpry - 리드 생성 도구",
+        "description": "여러 플랫폼에서 비즈니스 연락처를 찾기 위한 강력한 리드 생성 도구"
+    },
+    "language": {
+        "select": "언어 선택",
+        "en": "영어",
+        "es": "스페인어",
+        "fr": "프랑스어",
+        "de": "독일어",
+        "it": "이탈리아어",
+        "pt": "포르투갈어",
+        "ru": "러시아어",
+        "zh": "중국어",
+        "ja": "일본어",
+        "ko": "한국어",
+        "ar": "아랍어",
+        "hi": "힌디어",
+        "nl": "네덜란드어",
+        "pl": "폴란드어",
+        "tr": "터키어",
+        "vi": "베트남어",
+        "th": "태국어",
+        "id": "인도네시아어",
+        "ms": "말레이어",
+        "fa": "페르시아어",
+        "he": "히브리어",
+        "el": "그리스어",
+        "ro": "루마니아어",
+        "hu": "헝가리어",
+        "cs": "체코어",
+        "sv": "스웨덴어",
+        "da": "덴마크어",
+        "fi": "핀란드어",
+        "no": "노르웨이어"
+    }
+} 
